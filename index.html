@@ -715,13 +715,37 @@
             <li class="chapter-entry"><a href="#ch3">Chương 3. Lập kế hoạch, nhân lực và dự trù kinh phí</a> <span
                     class="toc-page">6</span></li>
             <li><a href="#s3-1">3.1. Lập kế hoạch và giải pháp dự án</a> <span class="toc-page">6</span></li>
-            <li><a href="#s3-2">3.2. Tổ chức, quản lý nhân lực và phân chia công việc</a> <span
-                    class="toc-page">8</span></li>
-            <li><a href="#s3-3">3.3. Chi tiết dự trù kinh phí</a> <span class="toc-page">10</span></li>
+            <li style="padding-left:2em;"><a href="#s3-1a">Mục tiêu kỹ thuật của hệ thống WiFi</a> <span
+                    class="toc-page">6</span></li>
+            <li style="padding-left:2em;"><a href="#s3-1b">Giải pháp công nghệ và mô hình mạng đề xuất</a> <span
+                    class="toc-page">6</span></li>
+            <li style="padding-left:2em;"><a href="#s3-1c">Kế hoạch triển khai theo các giai đoạn</a> <span
+                    class="toc-page">7</span></li>
+            <li style="padding-left:2em;"><a href="#s3-1d">Tiến độ thực hiện và quản lý công việc</a> <span
+                    class="toc-page">7</span></li>
+            <li><a href="#s3-2">3.2. Tổ chức và quản lý nhân lực</a> <span class="toc-page">8</span></li>
+            <li style="padding-left:2em;"><a href="#s3-2a">Quản lý dự án</a> <span class="toc-page">8</span></li>
+            <li style="padding-left:2em;"><a href="#s3-2b">Nhóm kỹ thuật</a> <span class="toc-page">8</span></li>
+            <li style="padding-left:2em;"><a href="#s3-2c">Nhóm hỗ trợ</a> <span class="toc-page">9</span></li>
+            <li><a href="#s3-3">3.3. Dự trù kinh phí</a> <span class="toc-page">10</span></li>
+            <li style="padding-left:2em;"><a href="#s3-3a">Thiết bị mạng</a> <span class="toc-page">10</span></li>
+            <li style="padding-left:2em;"><a href="#s3-3b">Chi phí lắp đặt</a> <span class="toc-page">10</span></li>
+            <li style="padding-left:2em;"><a href="#s3-3c">Nhân công, vận hành và bảo trì</a> <span
+                    class="toc-page">11</span></li>
+            <li style="padding-left:2em;"><a href="#s3-3d">Chi phí dự phòng</a> <span class="toc-page">11</span></li>
             <li class="chapter-entry"><a href="#ch4">Chương 4. Giám sát dự án, đánh giá kết quả</a> <span
                     class="toc-page">12</span></li>
-            <li><a href="#s4-1">4.1. Giám sát và theo dõi tiến độ dự án</a> <span class="toc-page">12</span></li>
-            <li><a href="#s4-2">4.2. Quản lý rủi ro và kịch bản xử lý sự cố</a> <span class="toc-page">13</span></li>
+            <li><a href="#s4-1">4.1. Giám sát tiến độ và chất lượng</a> <span class="toc-page">12</span></li>
+            <li style="padding-left:2em;"><a href="#s4-1a">Theo dõi tiến độ dự án</a> <span class="toc-page">12</span>
+            </li>
+            <li style="padding-left:2em;"><a href="#s4-1b">Kiểm soát chất lượng</a> <span class="toc-page">12</span>
+            </li>
+            <li><a href="#s4-2">4.2. Quản lý rủi ro</a> <span class="toc-page">13</span></li>
+            <li style="padding-left:2em;"><a href="#s4-2a">Sự cố kỹ thuật</a> <span class="toc-page">13</span></li>
+            <li style="padding-left:2em;"><a href="#s4-2b">Chậm tiến độ</a> <span class="toc-page">14</span></li>
+            <li style="padding-left:2em;"><a href="#s4-2c">Vượt ngân sách</a> <span class="toc-page">14</span></li>
+            <li style="padding-left:2em;"><a href="#s4-2d">Đề xuất biện pháp phòng ngừa</a> <span
+                    class="toc-page">15</span></li>
             <li><a href="#s4-3">4.3. Đánh giá, nghiệm thu</a> <span class="toc-page">16</span></li>
             <li class="chapter-entry"><a href="#conclusion">Kết luận</a> <span class="toc-page">17</span></li>
             <li class="chapter-entry"><a href="#references">Tài liệu tham khảo</a> <span class="toc-page">18</span></li>
@@ -861,11 +885,35 @@
         </div>
 
         <h2 id="s3-1">3.1. Lập kế hoạch và giải pháp dự án</h2>
-        <h3>Mục tiêu &amp; Giải pháp:</h3>
-        <p>Triển khai hệ thống <strong>WiFi 6 (802.11ax)</strong> chịu tải 5.000 user (sinh viên và giảng viên) tại cơ
-            sở chính (Số 8 Bùi Xuân Phái) và Ký túc xá (Nguyễn Cơ Thạch).</p>
 
-        <h3>Kế hoạch triển khai — Dự kiến 45 ngày (01/02/2025 – 17/03/2025):</h3>
+        <h3 id="s3-1a">a) Mục tiêu kỹ thuật của hệ thống WiFi</h3>
+        <ul>
+            <li>Phủ sóng WiFi <strong>100%</strong> diện tích giảng đường, thư viện, phòng thực hành, khuôn viên và ký
+                túc xá.</li>
+            <li>Hệ thống chịu tải đồng thời <strong>3.500 — 4.000 thiết bị</strong> trong giờ cao điểm.</li>
+            <li>Tốc độ tối thiểu <strong>15 Mbps/user</strong> cho mọi khu vực.</li>
+            <li>Đảm bảo <strong>chuyển vùng liền mạch</strong> (Seamless Roaming) giữa các AP trong cùng khu vực.</li>
+            <li>Hệ thống bảo mật theo chuẩn <strong>WPA3-Enterprise</strong>, xác thực người dùng qua RADIUS.</li>
+        </ul>
+
+        <h3 id="s3-1b">b) Giải pháp công nghệ và mô hình mạng đề xuất</h3>
+        <p>Triển khai hệ thống <strong>WiFi 6 (802.11ax)</strong> — chuẩn mạng không dây thế hệ mới nhất, hỗ trợ công
+            nghệ
+            OFDMA và MU-MIMO, tối ưu cho môi trường đông người dùng.</p>
+        <p><strong>Mô hình mạng ba tầng:</strong></p>
+        <ul>
+            <li><strong>Core Layer:</strong> Core Switch 10G + Firewall — xử lý định tuyến trung tâm, phân chia VLAN,
+                quản lý an ninh mạng.</li>
+            <li><strong>Distribution Layer:</strong> 15 Switch Access PoE 24 port — cấp nguồn PoE cho AP, kết nối đường
+                trục.</li>
+            <li><strong>Access Layer:</strong> 120 Access Point WiFi 6 (Indoor/Outdoor) — phát sóng trực tiếp đến người
+                dùng.</li>
+        </ul>
+        <p>Toàn bộ hệ thống được quản lý tập trung qua <strong>WiFi Controller</strong>, cho phép giám sát, cấu hình và
+            xử lý sự cố từ xa.</p>
+
+        <h3 id="s3-1c">c) Kế hoạch triển khai theo các giai đoạn</h3>
+        <p class="no-indent">Dự kiến <strong>45 ngày</strong> (01/02/2025 – 17/03/2025), chia thành 5 giai đoạn:</p>
         <table class="content-table timeline-table">
             <thead>
                 <tr>
@@ -905,25 +953,48 @@
             </tbody>
         </table>
 
-        <h2 id="s3-2">3.2. Tổ chức, quản lý nhân lực và phân chia công việc</h2>
+        <h3 id="s3-1d">d) Tiến độ thực hiện và quản lý công việc</h3>
+        <p>Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để theo dõi tiến độ từng giai đoạn.
+            Mỗi task được gán
+            người phụ trách, deadline và trạng thái (To-do / In Progress / Done). Huy và Phương họp nhanh
+            <strong>Daily Standup 15 phút</strong> mỗi sáng để rà soát khối lượng công việc hoàn thành và các vướng mắc
+            cần giải quyết.
+        </p>
+
+        <h2 id="s3-2">3.2. Tổ chức và quản lý nhân lực</h2>
         <p class="no-indent">Dự án được đồng quản lý bởi 2 học viên, phân chia nhiệm vụ và chấm công (Timesheet) như
             sau:</p>
 
+        <h3 id="s3-2a">a) Quản lý dự án</h3>
         <div class="role-card">
-            <div class="role-name">1. Nguyễn Hữu Huy</div>
-            <div class="role-title">Giám đốc dự án (Project Manager) kiêm Trưởng nhóm Kỹ thuật (Tech Lead)</div>
-            <p class="no-indent"><strong>Công việc:</strong></p>
+            <div class="role-name">Nguyễn Hữu Huy</div>
+            <div class="role-title">Giám đốc dự án (Project Manager)</div>
+            <p class="no-indent"><strong>Trách nhiệm:</strong></p>
             <ul>
-                <li>Thiết kế kiến trúc mạng tổng thể (Core, Distribution, Access).</li>
-                <li>Trực tiếp cấu hình Core Switch, Firewall, và hệ thống quản lý WiFi Controller.</li>
-                <li>Xử lý các sự cố kỹ thuật phức tạp (Cấp phát IP, định tuyến, lỗi thiết bị).</li>
+                <li>Lập kế hoạch tổng thể, phân bổ nguồn lực và kiểm soát tiến độ dự án.</li>
+                <li>Phê duyệt các quyết định kỹ thuật và tài chính quan trọng.</li>
+                <li>Báo cáo tiến độ cho giảng viên hướng dẫn và Ban Giám hiệu nhà trường.</li>
             </ul>
             <p class="no-indent" style="margin-top:6px;"><strong>Chấm công:</strong> Tham gia Full-time (<strong>45 ngày
                     công</strong>).</p>
         </div>
 
+        <h3 id="s3-2b">b) Nhóm kỹ thuật</h3>
         <div class="role-card">
-            <div class="role-name">2. Nguyễn Thị Phương</div>
+            <div class="role-name">Nguyễn Hữu Huy</div>
+            <div class="role-title">Trưởng nhóm Kỹ thuật (Tech Lead)</div>
+            <p class="no-indent"><strong>Công việc kỹ thuật chuyên sâu:</strong></p>
+            <ul>
+                <li>Thiết kế kiến trúc mạng tổng thể (Core, Distribution, Access).</li>
+                <li>Trực tiếp cấu hình Core Switch, Firewall, và hệ thống quản lý WiFi Controller.</li>
+                <li>Xử lý các sự cố kỹ thuật phức tạp (Cấp phát IP, định tuyến, lỗi thiết bị).</li>
+                <li>Đo kiểm, tối ưu băng thông và chất lượng sóng toàn hệ thống.</li>
+            </ul>
+        </div>
+
+        <h3 id="s3-2c">c) Nhóm hỗ trợ</h3>
+        <div class="role-card">
+            <div class="role-name">Nguyễn Thị Phương</div>
             <div class="role-title">Phó Giám đốc dự án kiêm Trưởng nhóm Triển khai &amp; Hỗ trợ</div>
             <p class="no-indent"><strong>Công việc:</strong></p>
             <ul>
@@ -937,83 +1008,115 @@
         </div>
 
         <div class="role-card" style="border-color:var(--border);">
-            <div class="role-name">3. Đội thi công mạng (Outsource/Nhóm hỗ trợ)</div>
+            <div class="role-name">Đội thi công mạng (Outsource)</div>
             <div class="role-title">6 nhân viên đi dây cáp, khoan trần lắp AP</div>
             <p class="no-indent">Phương trực tiếp chấm công cho đội này theo tiến độ hoàn thành từng tầng.</p>
         </div>
 
-        <h2 id="s3-3">3.3. Chi tiết dự trù kinh phí</h2>
+        <h2 id="s3-3">3.3. Dự trù kinh phí</h2>
         <p class="no-indent" style="font-style:italic;color:var(--text-light);font-size:11pt;">(Bảng dự toán giả định
             cho quy mô 5.000 user)</p>
 
+        <h3 id="s3-3a">a) Thiết bị mạng</h3>
+        <table class="content-table" style="margin-bottom:8px;">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hạng mục</th>
+                    <th>SL</th>
+                    <th style="text-align:right;">Đơn giá (VNĐ)</th>
+                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Core Switch 10G &amp; Firewall</td>
+                    <td>2 bộ</td>
+                    <td style="text-align:right;">85.000.000</td>
+                    <td style="text-align:right;font-weight:700;">170.000.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Access Point WiFi 6 (Indoor/Outdoor)</td>
+                    <td>120 chiếc</td>
+                    <td style="text-align:right;">4.500.000</td>
+                    <td style="text-align:right;font-weight:700;">540.000.000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Switch Access PoE 24 port</td>
+                    <td>15 chiếc</td>
+                    <td style="text-align:right;">12.000.000</td>
+                    <td style="text-align:right;font-weight:700;">180.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="s3-3b">b) Chi phí lắp đặt</h3>
+        <table class="content-table" style="margin-bottom:8px;">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hạng mục</th>
+                    <th>SL</th>
+                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Cáp mạng Cat6, ống gen, vật tư phụ</td>
+                    <td>Lô</td>
+                    <td style="text-align:right;font-weight:700;">120.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="s3-3c">c) Nhân công, vận hành và bảo trì</h3>
+        <table class="content-table" style="margin-bottom:8px;">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hạng mục</th>
+                    <th>SL</th>
+                    <th style="text-align:right;">Đơn giá (VNĐ)</th>
+                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>Nhân công thi công (6 thợ × 20 ngày)</td>
+                    <td>120 công</td>
+                    <td style="text-align:right;">500.000</td>
+                    <td style="text-align:right;font-weight:700;">60.000.000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Phí cấu hình, quản lý dự án</td>
+                    <td>2 gói</td>
+                    <td style="text-align:right;">40.000.000</td>
+                    <td style="text-align:right;font-weight:700;">80.000.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="s3-3d">d) Chi phí dự phòng</h3>
         <div class="budget-highlight">
             <table class="content-table" style="margin:0;">
                 <thead>
                     <tr>
                         <th>STT</th>
                         <th>Hạng mục</th>
-                        <th>SL</th>
-                        <th style="text-align:right;">Đơn giá (VNĐ)</th>
                         <th style="text-align:right;">Thành tiền (VNĐ)</th>
-                        <th>Phụ trách</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Core Switch 10G &amp; Firewall</td>
-                        <td>2 bộ</td>
-                        <td style="text-align:right;">85.000.000</td>
-                        <td style="text-align:right;font-weight:700;">170.000.000</td>
-                        <td>Phương</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Access Point WiFi 6 (Indoor/Outdoor)</td>
-                        <td>120 chiếc</td>
-                        <td style="text-align:right;">4.500.000</td>
-                        <td style="text-align:right;font-weight:700;">540.000.000</td>
-                        <td>Phương</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Switch Access PoE 24 port</td>
-                        <td>15 chiếc</td>
-                        <td style="text-align:right;">12.000.000</td>
-                        <td style="text-align:right;font-weight:700;">180.000.000</td>
-                        <td>Phương</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Cáp mạng Cat6, ống gen, vật tư phụ</td>
-                        <td>Lô</td>
-                        <td style="text-align:right;">120.000.000</td>
-                        <td style="text-align:right;font-weight:700;">120.000.000</td>
-                        <td>Phương</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Nhân công thi công (6 thợ × 20 ngày)</td>
-                        <td>120 công</td>
-                        <td style="text-align:right;">500.000</td>
-                        <td style="text-align:right;font-weight:700;">60.000.000</td>
-                        <td>Phương</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Phí cấu hình, quản lý dự án</td>
-                        <td>2 gói</td>
-                        <td style="text-align:right;">40.000.000</td>
-                        <td style="text-align:right;font-weight:700;">80.000.000</td>
-                        <td>Huy &amp; Phương</td>
-                    </tr>
-                    <tr>
                         <td>7</td>
                         <td>Chi phí dự phòng phát sinh (10%)</td>
-                        <td>—</td>
-                        <td style="text-align:right;">—</td>
                         <td style="text-align:right;font-weight:700;">115.000.000</td>
-                        <td>Huy phê duyệt</td>
                     </tr>
                 </tbody>
             </table>
@@ -1043,45 +1146,44 @@
             tiễn quản lý dự án CNTT.
         </div>
 
-        <h2 id="s4-1">4.1. Giám sát và theo dõi tiến độ dự án</h2>
+        <h2 id="s4-1">4.1. Giám sát tiến độ và chất lượng</h2>
+
+        <h3 id="s4-1a">a) Theo dõi tiến độ dự án</h3>
         <ul>
             <li><strong>Công cụ:</strong> Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để
-                theo dõi các đầu việc.</li>
+                theo dõi các đầu việc, gán người phụ trách và deadline cho từng task.</li>
             <li><strong>Báo cáo hàng ngày (Daily Standup):</strong> Huy và Phương họp nhanh 15 phút mỗi sáng để rà soát:
                 <em>"Hôm qua thợ thi công được mấy phòng? Có vướng mắc gì ở phòng thí nghiệm Y khoa/Mỹ thuật
                     không?"</em>
             </li>
             <li><strong>Báo cáo tuần:</strong> Phương tổng hợp file báo cáo tiến độ và mức tiêu hao vật tư gửi cho Ban
                 Giám hiệu nhà trường vào chiều thứ Sáu hàng tuần.</li>
+            <li><strong>Milestone kiểm tra:</strong> Cuối mỗi giai đoạn (GĐ 1-5), Huy kiểm tra và ký xác nhận hoàn thành
+                trước khi chuyển sang giai đoạn tiếp theo.</li>
         </ul>
 
-        <h2 id="s4-2">4.2. Quản lý rủi ro và kịch bản xử lý sự cố (Troubleshooting)</h2>
-        <p>Để hệ thống phục vụ 5.000 user hoạt động trơn tru, dự án thiết lập kịch bản phân cấp xử lý sự cố:</p>
+        <h3 id="s4-1b">b) Kiểm soát chất lượng</h3>
+        <ul>
+            <li><strong>Đo kiểm sóng WiFi:</strong> Sử dụng phần mềm <strong>Ekahau</strong> hoặc <strong>WiFi
+                    Analyzer</strong> đo cường độ tín hiệu (dBm) tại từng khu vực sau khi lắp đặt. Yêu cầu tối thiểu
+                <strong>-65 dBm</strong> tại mọi điểm.
+            </li>
+            <li><strong>Kiểm tra tốc độ:</strong> Chạy <strong>iPerf3</strong> kiểm tra băng thông thực tế, đảm bảo đạt
+                tối thiểu <strong>15 Mbps/user</strong>.</li>
+            <li><strong>Kiểm tra chuyển vùng:</strong> Test Seamless Roaming bằng cách di chuyển thiết bị giữa các AP,
+                đảm bảo không bị ngắt kết nối.</li>
+            <li><strong>Stress Test:</strong> Mô phỏng tình huống <strong>3.500 thiết bị kết nối đồng thời</strong> để
+                kiểm tra khả năng chịu tải của hệ thống.</li>
+        </ul>
+
+        <h2 id="s4-2">4.2. Quản lý rủi ro</h2>
+        <p>Để hệ thống phục vụ 5.000 user hoạt động trơn tru, dự án thiết lập kịch bản phân cấp xử lý các rủi ro chính:
+        </p>
+
+        <h3 id="s4-2a">a) Sự cố kỹ thuật</h3>
 
         <div class="incident-card">
-            <div class="incident-title">🔴 Sự cố 1: Thi công gây ồn, ảnh hưởng giờ học tại giảng đường</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Ban quản lý tòa nhà yêu cầu
-                    dừng thi công.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử
-                    lý:</span><span><strong>Phương</strong></span></div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Phương đàm phán, điều chỉnh
-                    lịch thi công sang <strong>ca đêm (21h00 — 05h00)</strong>. Cập nhật lại sơ đồ tiến độ thi
-                    công.</span></div>
-        </div>
-
-        <div class="incident-card">
-            <div class="incident-title">🟠 Sự cố 2: Đứt cáp quang/cáp mạng do chuột cắn hoặc thi công sai</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Một khu vực (VD: Thư viện)
-                    hoàn toàn mất kết nối.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Phương</strong>
-                    (điều phối) và Đội thi công</span></div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Dùng máy đo quang/đo cáp xác
-                    định điểm đứt. Phương xuất vật tư dự phòng từ kho, yêu cầu đội thợ nối lại hoặc kéo cáp mới trong
-                    vòng <strong>2 giờ (SLA 2h)</strong>.</span></div>
-        </div>
-
-        <div class="incident-card">
-            <div class="incident-title">🔴 Sự cố 3: Nghẽn băng thông, sập Controller do quá tải (Nghẽn IP)</div>
+            <div class="incident-title">🔴 Nghẽn băng thông / Xung đột IP</div>
             <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Sinh viên vào được WiFi
                     nhưng báo <em>"No Internet"</em> hoặc <em>"IP Conflict"</em>.</span></div>
             <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong></span>
@@ -1092,7 +1194,18 @@
         </div>
 
         <div class="incident-card">
-            <div class="incident-title">🟡 Sự cố 4: Điểm mù sóng (Dead-zone) tại Ký túc xá</div>
+            <div class="incident-title">🟠 Đứt cáp quang/cáp mạng</div>
+            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Một khu vực (VD: Thư viện)
+                    hoàn toàn mất kết nối.</span></div>
+            <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Phương</strong>
+                    (điều phối) và Đội thi công</span></div>
+            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Dùng máy đo quang/đo cáp xác
+                    định điểm đứt. Phương xuất vật tư dự phòng từ kho, yêu cầu đội thợ nối lại hoặc kéo cáp mới trong
+                    vòng <strong>2 giờ (SLA 2h)</strong>.</span></div>
+        </div>
+
+        <div class="incident-card">
+            <div class="incident-title">🟡 Điểm mù sóng (Dead-zone) tại Ký túc xá</div>
             <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Tín hiệu cuối hành lang
                     phòng ở KTX (45m², nhiều vách tường) bị yếu.</span></div>
             <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong> (đo
@@ -1102,10 +1215,49 @@
                     mua thêm <strong>5 bộ AP phát xuyên tường</strong> bổ sung cho các điểm lọt sóng.</span></div>
         </div>
 
+        <h3 id="s4-2b">b) Chậm tiến độ</h3>
+        <div class="incident-card">
+            <div class="incident-title">⏰ Thi công gây ồn, ảnh hưởng giờ học</div>
+            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Ban quản lý tòa nhà yêu cầu
+                    dừng thi công trong giờ hành chính.</span></div>
+            <div class="incident-row"><span class="incident-label">Người xử
+                    lý:</span><span><strong>Phương</strong></span></div>
+            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Phương đàm phán, điều chỉnh
+                    lịch thi công sang <strong>ca đêm (21h00 — 05h00)</strong> và cuối tuần. Cập nhật lại sơ đồ tiến
+                    độ.</span></div>
+        </div>
+        <p>Trong trường hợp trễ tiến độ nghiêm trọng (&gt; 5 ngày), Huy báo cáo giảng viên hướng dẫn và đề xuất tăng ca
+            hoặc bổ sung nhân lực thi công.</p>
+
+        <h3 id="s4-2c">c) Vượt ngân sách</h3>
+        <ul>
+            <li>Mọi chi phí phát sinh &gt; <strong>5.000.000 VNĐ</strong> phải được Huy phê duyệt trước khi thực hiện.
+            </li>
+            <li>Sử dụng <strong>quỹ dự phòng 10% (~115 triệu VNĐ)</strong> cho các chi phí không lường trước.</li>
+            <li>Phương theo dõi bảng Excel chi tiêu hàng ngày, cảnh báo khi tổng chi phí vượt <strong>90%</strong> ngân
+                sách dự kiến.</li>
+            <li>Nếu vượt quỹ dự phòng, dự án sẽ xem xét đàm phán lại giá với nhà cung cấp hoặc giảm số lượng AP tại các
+                khu vực ít sử dụng.</li>
+        </ul>
+
+        <h3 id="s4-2d">d) Đề xuất biện pháp phòng ngừa</h3>
+        <ul>
+            <li><strong>Lập danh sách nhà cung cấp dự phòng:</strong> Chuẩn bị sẵn 2–3 nhà cung cấp thiết bị thay thế để
+                tránh phụ thuộc vào một đơn vị.</li>
+            <li><strong>Dự trữ vật tư:</strong> Luôn dự trữ <strong>10% số lượng</strong> cáp mạng và AP để xử lý các
+                tình huống hư hỏng, thay thế nhanh.</li>
+            <li><strong>Bảo hiểm thiết bị:</strong> Yêu cầu nhà cung cấp cam kết bảo hành <strong>tối thiểu 3
+                    năm</strong> cho toàn bộ thiết bị.</li>
+            <li><strong>Đào tạo chuyển giao:</strong> Lập kế hoạch đào tạo bộ phận IT trường vận hành hệ thống ngay từ
+                giai đoạn 4 (cấu hình) để đảm bảo tính bền vững.</li>
+        </ul>
+
         <h2 id="s4-3">4.3. Đánh giá, nghiệm thu</h2>
         <ul>
             <li><strong>Huy:</strong> Xuất cấu hình hệ thống (Backup Config), lập tài liệu hướng dẫn vận hành mạng.</li>
             <li><strong>Phương:</strong> Tập hợp hồ sơ bản vẽ hoàn công, biên bản bàn giao thiết bị.</li>
+            <li>Kiểm tra nghiệm thu theo <strong>checklist</strong>: phủ sóng 100%, tốc độ ≥ 15Mbps, Roaming hoạt động,
+                bảo mật WPA3.</li>
             <li>Cả hai cùng ký bàn giao hệ thống với <strong>Phòng Công nghệ Thông tin</strong> của Trường Đại học Hòa
                 Bình, kết thúc dự án.</li>
         </ul>

@@ -502,16 +502,100 @@
         }
 
         @media print {
+            @page {
+                size: A4 portrait;
+                margin: 25mm 25mm 30mm 30mm;
+            }
+
+            html,
             body {
-                background: #fff;
+                width: 210mm;
+                background: #fff !important;
             }
 
             .page {
-                box-shadow: none;
-                border: none;
-                margin: 0;
+                width: 100% !important;
+                min-height: 0 !important;
+                height: auto !important;
+                box-shadow: none !important;
+                border: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
                 page-break-after: always;
+                page-break-inside: avoid;
+                overflow: visible !important;
             }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            .cover-page {
+                min-height: calc(297mm - 25mm - 30mm) !important;
+            }
+
+            .page-header {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                margin-bottom: 10px;
+            }
+
+            .page-footer {
+                position: relative !important;
+                bottom: auto !important;
+                left: auto !important;
+                right: auto !important;
+                margin-top: 20px;
+            }
+
+            .btn-export-pdf {
+                display: none !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+
+        /* Export PDF button */
+        .btn-export-pdf {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 13pt;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(26, 60, 110, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-export-pdf:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(26, 60, 110, 0.45);
+        }
+
+        .btn-export-pdf:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-export-pdf svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
         }
 
         @media (max-width:800px) {
@@ -1076,6 +1160,21 @@
             <div class="page-number">17</div>
         </div>
     </div>
+
+    <!-- Nút Xuất PDF -->
+    <button class="btn-export-pdf" onclick="exportPDF()" title="Xuất file PDF">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
+        </svg>
+        Xuất PDF
+    </button>
+
+    <script>
+        function exportPDF() {
+            window.print();
+        }
+    </script>
 
 </body>
 

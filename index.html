@@ -2,10 +2,10 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lập Dự Án Phủ Sóng WiFi Cho Trường Đại Học Hòa Bình</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lập Dự Án Phủ Sóng WiFi Cho Trường Đại Học Hòa Bình</title>
+  <style>
     :root {
       --page-w: 210mm;
       --page-h: 297mm;
@@ -19,7 +19,11 @@
       --bg-light: #f5f7fa;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Times New Roman', Times, serif;
@@ -35,142 +39,540 @@
       background: #fff;
       margin: 20px auto;
       padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       position: relative;
     }
 
     .page-header {
-      position: absolute; top: 0; left: 0; right: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 18mm;
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
       padding: 3mm var(--margin-right) 3mm var(--margin-left);
       border-bottom: 2px solid var(--primary);
       background: #fff;
     }
-    .page-header .logo-img { height: 12mm; margin-right: 8px; }
-    .page-header .header-text { font-size: 9pt; color: var(--primary); font-weight: 500; line-height: 1.3; }
-    .page-header .header-text span { display: block; font-size: 8pt; color: #555; font-weight: 400; }
+
+    .page-header .logo-img {
+      height: 12mm;
+      margin-right: 8px;
+    }
+
+    .page-header .header-text {
+      font-size: 9pt;
+      color: var(--primary);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .page-header .header-text span {
+      display: block;
+      font-size: 8pt;
+      color: #555;
+      font-weight: 400;
+    }
 
     .page-footer {
-      position: absolute; bottom: 0; left: 0; right: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 12mm;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 2mm var(--margin-right) 2mm var(--margin-left);
       border-top: 1.5px solid var(--primary);
       background: #fff;
-      font-size: 9pt; color: #555;
+      font-size: 9pt;
+      color: #555;
     }
-    .page-footer .footer-title { font-style: italic; }
-    .page-footer .page-number { font-weight: 600; color: var(--primary); }
 
-    .page-content { height: 100%; overflow: hidden; padding-bottom: 2mm; }
+    .page-footer .footer-title {
+      font-style: italic;
+    }
+
+    .page-footer .page-number {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .page-content {
+      height: 100%;
+      overflow: hidden;
+      padding-bottom: 2mm;
+    }
 
     /* COVER */
-    .page.cover-container { padding: 0; display: flex; align-items: stretch; }
-    .page.cover-container .page-header, .page.cover-container .page-footer { display: none; }
-    .cover-border {
-      border: 3px double var(--primary); margin: 15mm; padding: 20mm 15mm;
-      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    .page.cover-container {
+      padding: 0;
+      display: flex;
+      align-items: stretch;
     }
-    .cover-university { font-size: 16pt; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
-    .cover-logo { width: 80px; height: 80px; margin: 25px 0; }
-    .cover-logo img { width: 100%; height: 100%; object-fit: contain; }
-    .cover-divider { width: 60%; height: 3px; background: linear-gradient(90deg, transparent, var(--primary), transparent); margin: 15px 0; }
-    .cover-subject { font-size: 12pt; color: var(--accent); font-weight: 500; text-transform: uppercase; letter-spacing: 2px; margin: 15px 0 5px; }
-    .cover-title { font-size: 22pt; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; line-height: 1.4; margin: 10px 0; text-align: center; }
-    .cover-info { margin-top: 30px; font-size: 12pt; }
-    .cover-info p { margin: 5px 0; text-indent: 0; }
-    .cover-info .label { color: #555; }
-    .cover-info .value { font-weight: 600; color: #1a1a1a; }
-    .cover-year { font-size: 14pt; font-weight: 700; color: var(--primary); margin-top: 30px; letter-spacing: 3px; }
+
+    .page.cover-container .page-header,
+    .page.cover-container .page-footer {
+      display: none;
+    }
+
+    .cover-border {
+      border: 3px double var(--primary);
+      margin: 15mm;
+      padding: 20mm 15mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-university {
+      font-size: 16pt;
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      margin: 25px 0;
+    }
+
+    .cover-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .cover-divider {
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      margin: 15px 0;
+    }
+
+    .cover-subject {
+      font-size: 12pt;
+      color: var(--accent);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 15px 0 5px;
+    }
+
+    .cover-title {
+      font-size: 22pt;
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .cover-info {
+      margin-top: 30px;
+      font-size: 12pt;
+    }
+
+    .cover-info p {
+      margin: 5px 0;
+      text-indent: 0;
+    }
+
+    .cover-info .label {
+      color: #555;
+    }
+
+    .cover-info .value {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .cover-year {
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 30px;
+      letter-spacing: 3px;
+    }
 
     /* TOC */
-    .toc-title { font-size: 14pt; color: var(--primary); text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700; }
-    .toc-list { list-style: none; padding: 0; }
-    .toc-list>li { margin: 2px 0; font-size: 10pt; font-weight: 400; color: #333; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dotted #ccc; padding-bottom: 2px; }
-    .toc-list>li.chapter-entry { font-weight: 700; color: var(--primary); font-size: 11pt; margin-top: 4px; border-bottom: 1.5px solid var(--primary); }
-    .toc-list>li>.toc-page, .toc-list li .toc-page { font-weight: 400; color: #555; min-width: 25px; text-align: right; }
-    .toc-list li a { text-decoration: none; color: inherit; flex: 1; }
+    .toc-title {
+      font-size: 14pt;
+      color: var(--primary);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-list>li {
+      margin: 2px 0;
+      font-size: 10pt;
+      font-weight: 400;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 2px;
+    }
+
+    .toc-list>li.chapter-entry {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 11pt;
+      margin-top: 4px;
+      border-bottom: 1.5px solid var(--primary);
+    }
+
+    .toc-list>li>.toc-page,
+    .toc-list li .toc-page {
+      font-weight: 400;
+      color: #555;
+      min-width: 25px;
+      text-align: right;
+    }
+
+    .toc-list li a {
+      text-decoration: none;
+      color: inherit;
+      flex: 1;
+    }
 
     /* HEADINGS */
-    .chapter-heading { font-size: 18pt; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; text-align: center; padding: 8px 0 12px; margin: 0 0 20px; border-bottom: 3px solid var(--primary); }
-    h2 { font-size: 14pt; color: #283593; margin: 22px 0 10px; }
-    h3 { font-size: 12pt; color: #303f9f; margin: 16px 0 8px; }
-    h4 { font-size: 11pt; color: #3949ab; margin: 12px 0 6px; }
-    p { margin: 6px 0; text-align: justify; }
-    p.no-indent { text-indent: 0; }
-    ul, ol { margin: 6px 0 6px 22px; }
-    li { margin: 3px 0; }
+    .chapter-heading {
+      font-size: 18pt;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding: 8px 0 12px;
+      margin: 0 0 20px;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    h2 {
+      font-size: 14pt;
+      color: #283593;
+      margin: 22px 0 10px;
+    }
+
+    h3 {
+      font-size: 12pt;
+      color: #303f9f;
+      margin: 16px 0 8px;
+    }
+
+    h4 {
+      font-size: 11pt;
+      color: #3949ab;
+      margin: 12px 0 6px;
+    }
+
+    p {
+      margin: 6px 0;
+      text-align: justify;
+    }
+
+    p.no-indent {
+      text-indent: 0;
+    }
+
+    ul,
+    ol {
+      margin: 6px 0 6px 22px;
+    }
+
+    li {
+      margin: 3px 0;
+    }
 
     /* TABLES */
-    table, table.content-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 11pt; }
-    th { background: var(--primary); color: #fff; padding: 7px 8px; text-align: left; font-weight: 500; font-size: 10.5pt; }
-    td { padding: 6px 8px; border: 1px solid #ddd; }
-    tr:nth-child(even) { background: #f5f5f5; }
-    .result-table th { background: #2e7d32; }
-    .timeline-table td:first-child { white-space: nowrap; font-weight: 700; color: var(--primary); }
+    table,
+    table.content-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 11pt;
+    }
+
+    th {
+      background: var(--primary);
+      color: #fff;
+      padding: 7px 8px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 10.5pt;
+    }
+
+    td {
+      padding: 6px 8px;
+      border: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background: #f5f5f5;
+    }
+
+    .result-table th {
+      background: #2e7d32;
+    }
+
+    .timeline-table td:first-child {
+      white-space: nowrap;
+      font-weight: 700;
+      color: var(--primary);
+    }
 
     /* MISC */
-    blockquote { border-left: 4px solid var(--primary); padding: 8px 14px; background: #e8eaf6; margin: 10px 0; font-size: 11pt; }
-    strong { color: var(--primary); }
-    .separator { border: none; border-top: 2px solid var(--primary); margin: 20px 0; }
+    blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 8px 14px;
+      background: #e8eaf6;
+      margin: 10px 0;
+      font-size: 11pt;
+    }
 
-    .section-title-special { font-size: 16pt; color: var(--primary); font-weight: 700; text-align: center; margin: 20px 0 15px; }
-    .thank-you-box { border: 2px solid var(--primary); border-radius: 8px; padding: 20px 24px; margin: 20px 0; background: #e8eaf6; font-style: italic; color: #555; text-align: center; }
-    .budget-highlight { background: linear-gradient(135deg, rgba(26,35,126,0.06), rgba(198,40,40,0.06)); border: 1.5px solid var(--primary); border-radius: 8px; padding: 14px 16px; margin: 14px 0; }
-    .budget-highlight .total-line { font-size: 14pt; font-weight: 900; color: var(--primary); text-align: center; margin-top: 10px; padding-top: 10px; border-top: 2px solid var(--primary); }
-    .note-box { background: rgba(26,35,126,0.05); border-left: 4px solid var(--primary-light); padding: 10px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 11pt; color: #555; }
-    .incident-card { border: 1.5px solid #ddd; border-radius: 8px; padding: 14px 18px; margin: 12px 0; background: #fff; }
-    .incident-card .incident-title { font-weight: 700; color: var(--primary); font-size: 12pt; margin-bottom: 8px; border-bottom: 2px solid var(--primary); padding-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-    .incident-card .incident-row { display: flex; margin: 4px 0; font-size: 11pt; }
-    .incident-card .incident-label { font-weight: 600; color: var(--primary); min-width: 120px; }
-    .role-card { border: 1.5px solid var(--primary); border-radius: 8px; padding: 14px 18px; margin: 12px 0; background: linear-gradient(135deg, rgba(26,35,126,0.03), rgba(57,73,171,0.03)); }
-    .role-card .role-name { font-weight: 900; color: var(--primary); font-size: 13pt; margin-bottom: 4px; }
-    .role-card .role-title { font-weight: 600; color: var(--accent); font-size: 11pt; margin-bottom: 8px; font-style: italic; }
-    .references { font-size: 11pt; }
-    .references li { margin: 8px 0; }
+    strong {
+      color: var(--primary);
+    }
+
+    .separator {
+      border: none;
+      border-top: 2px solid var(--primary);
+      margin: 20px 0;
+    }
+
+    .section-title-special {
+      font-size: 16pt;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: center;
+      margin: 20px 0 15px;
+    }
+
+    .thank-you-box {
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      background: #e8eaf6;
+      font-style: italic;
+      color: #555;
+      text-align: center;
+    }
+
+    .budget-highlight {
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.06), rgba(198, 40, 40, 0.06));
+      border: 1.5px solid var(--primary);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    .budget-highlight .total-line {
+      font-size: 14pt;
+      font-weight: 900;
+      color: var(--primary);
+      text-align: center;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 2px solid var(--primary);
+    }
+
+    .note-box {
+      background: rgba(26, 35, 126, 0.05);
+      border-left: 4px solid var(--primary-light);
+      padding: 10px 16px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 11pt;
+      color: #555;
+    }
+
+    .incident-card {
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      background: #fff;
+    }
+
+    .incident-card .incident-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 12pt;
+      margin-bottom: 8px;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .incident-card .incident-row {
+      display: flex;
+      margin: 4px 0;
+      font-size: 11pt;
+    }
+
+    .incident-card .incident-label {
+      font-weight: 600;
+      color: var(--primary);
+      min-width: 120px;
+    }
+
+    .role-card {
+      border: 1.5px solid var(--primary);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.03), rgba(57, 73, 171, 0.03));
+    }
+
+    .role-card .role-name {
+      font-weight: 900;
+      color: var(--primary);
+      font-size: 13pt;
+      margin-bottom: 4px;
+    }
+
+    .role-card .role-title {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 11pt;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .references {
+      font-size: 11pt;
+    }
+
+    .references li {
+      margin: 8px 0;
+    }
 
     /* EXPORT BUTTON */
-    .no-print, .btn-export-pdf {
-      position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+    .no-print,
+    .btn-export-pdf {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
       background: linear-gradient(135deg, #1a237e, #283593);
-      color: #fff; border: none; padding: 14px 28px; font-size: 14pt;
-      font-family: 'Times New Roman', serif; border-radius: 8px; cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;
-      display: flex; align-items: center; gap: 10px;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 14pt;
+      font-family: 'Times New Roman', serif;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .no-print:hover, .btn-export-pdf:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
-    .btn-export-pdf svg { width: 20px; height: 20px; fill: #fff; }
+
+    .no-print:hover,
+    .btn-export-pdf:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-export-pdf svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
 
     @media print {
-      @page { size: A4; margin: 0; }
-      body { background: #fff; margin: 0; padding: 0; }
-      .page { width: 210mm; height: 297mm; min-height: 297mm; margin: 0; padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left); box-shadow: none; page-break-after: always; page-break-inside: avoid; }
-      .page:last-child { page-break-after: auto; }
-      .no-print, .btn-export-pdf { display: none !important; }
-      table { page-break-inside: avoid; }
-      h1, h2, h3 { page-break-after: avoid; }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .no-print,
+      .btn-export-pdf {
+        display: none !important;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+
+      h1,
+      h2,
+      h3 {
+        page-break-after: avoid;
+      }
     }
 
     @media (max-width:800px) {
-      .page { width: 100%; height: auto; padding: 20px; margin: 10px auto; }
-      .page-header, .page-footer { display: none; }
-    }
+      .page {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin: 10px auto;
+      }
 
-    </style>
+      .page-header,
+      .page-footer {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ==================== TRANG BÌA ==================== -->
-    <div class="page cover-container">
+  <!-- ==================== TRANG BÌA ==================== -->
+  <div class="page cover-container">
     <div class="cover-border">
-      <p style="font-size: 13pt; color: #333; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Bộ Giáo dục và Đào tạo</p>
+      <p style="font-size: 13pt; color: #333; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Bộ Giáo
+        dục và Đào tạo</p>
       <p class="cover-university">Trường Đại học Hòa Bình</p>
       <div class="cover-logo"><img src="logo.png" alt="Logo" onerror="this.style.display='none'"></div>
       <div class="cover-divider"></div>
       <p class="cover-subject">Bài Tập Lớn</p>
-      <p style="font-size: 13pt; color: #c62828; font-weight: 500; text-transform: uppercase; letter-spacing: 2px;">Quản Lý Dự Án Công Nghệ Thông Tin</p>
+      <p style="font-size: 13pt; color: #c62828; font-weight: 500; text-transform: uppercase; letter-spacing: 2px;">Quản
+        Lý Dự Án Công Nghệ Thông Tin</p>
       <div class="cover-divider"></div>
       <p class="cover-title">Lập Dự Án Phủ Sóng WiFi<br>Cho Trường Đại Học Hoà Bình</p>
       <div class="cover-info">
@@ -183,41 +585,41 @@
     </div>
   </div>
 
-    <!-- ==================== TÓM TẮT & LỜI CẢM ƠN ==================== -->
-    <div class="page" id="summary-page">
-        <div class="page-header">
+  <!-- ==================== TÓM TẮT & LỜI CẢM ƠN ==================== -->
+  <div class="page" id="summary-page">
+    <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-        <div class="section-title-special">Tóm Tắt Đề Tài</div>
-        <p>Đề tài <strong>"Lập dự án phủ sóng WiFi cho Trường Đại học Hòa Bình"</strong> được thực hiện nhằm xây dựng và
-            nâng cấp hệ thống mạng không dây toàn diện cho trường. Với quy mô giả định lên tới <strong>5.000 sinh viên
-                và giảng viên</strong>, dự án tập trung khảo sát cơ sở hạ tầng hiện đại của trường, từ đó đề xuất giải
-            pháp công nghệ mạng chịu tải cao, dự trù kinh phí, phân bổ nhân lực và quản trị rủi ro.</p>
-        <p>Mục tiêu cuối cùng là cung cấp môi trường kết nối Internet tốc độ cao, ổn định, phục vụ đắc lực cho phương
-            châm <strong>"Đoàn kết - Đổi mới - Hội nhập - Phát triển"</strong> của nhà trường.</p>
-        <div style="height:20px;"></div>
-        <div class="section-title-special">Lời Cảm Ơn</div>
-        <div class="thank-you-box">
-            <p class="no-indent">Chúng em xin chân thành cảm ơn <strong>TS. Dư Đình Viên</strong> đã tận tình hướng dẫn
-                và truyền đạt những kiến thức quý báu trong suốt quá trình thực hiện bài tập lớn này.</p>
-            <p class="no-indent">Chúng em cũng xin gửi lời cảm ơn đến <strong>Trường Đại học Hòa Bình</strong> đã tạo
-                điều kiện thuận lợi cho chúng em trong quá trình học tập và nghiên cứu.</p>
-            <p class="no-indent">Do thời gian và kiến thức còn hạn chế, bài viết không tránh khỏi những thiếu sót. Chúng
-                em rất mong nhận được sự góp ý từ Thầy để bài viết được hoàn thiện hơn.</p>
-            <p class="no-indent" style="margin-top:16px;font-weight:600;color:var(--primary);font-style:normal;">Trân
-                trọng cảm ơn!</p>
-        </div>
-        </div>
+      <div class="section-title-special">Tóm Tắt Đề Tài</div>
+      <p>Đề tài <strong>"Lập dự án phủ sóng WiFi cho Trường Đại học Hòa Bình"</strong> được thực hiện nhằm xây dựng và
+        nâng cấp hệ thống mạng không dây toàn diện cho trường. Với quy mô giả định lên tới <strong>5.000 sinh viên
+          và giảng viên</strong>, dự án tập trung khảo sát cơ sở hạ tầng hiện đại của trường, từ đó đề xuất giải
+        pháp công nghệ mạng chịu tải cao, dự trù kinh phí, phân bổ nhân lực và quản trị rủi ro.</p>
+      <p>Mục tiêu cuối cùng là cung cấp môi trường kết nối Internet tốc độ cao, ổn định, phục vụ đắc lực cho phương
+        châm <strong>"Đoàn kết - Đổi mới - Hội nhập - Phát triển"</strong> của nhà trường.</p>
+      <div style="height:20px;"></div>
+      <div class="section-title-special">Lời Cảm Ơn</div>
+      <div class="thank-you-box">
+        <p class="no-indent">Chúng em xin chân thành cảm ơn <strong>TS. Dư Đình Viên</strong> đã tận tình hướng dẫn
+          và truyền đạt những kiến thức quý báu trong suốt quá trình thực hiện bài tập lớn này.</p>
+        <p class="no-indent">Chúng em cũng xin gửi lời cảm ơn đến <strong>Trường Đại học Hòa Bình</strong> đã tạo
+          điều kiện thuận lợi cho chúng em trong quá trình học tập và nghiên cứu.</p>
+        <p class="no-indent">Do thời gian và kiến thức còn hạn chế, bài viết không tránh khỏi những thiếu sót. Chúng
+          em rất mong nhận được sự góp ý từ Thầy để bài viết được hoàn thiện hơn.</p>
+        <p class="no-indent" style="margin-top:16px;font-weight:600;color:var(--primary);font-style:normal;">Trân
+          trọng cảm ơn!</p>
+      </div>
+    </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
       <span class="page-number">i</span>
     </div>
-    </div>
+  </div>
 
-    <!-- ==================== MỤC LỤC ==================== -->
-    <div class="page" id="toc-page">
+  <!-- ==================== MỤC LỤC ==================== -->
+  <div class="page" id="toc-page" >
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
@@ -225,41 +627,31 @@
     <div class="page-content">
         <h1 class="toc-title">Mục Lục</h1>
         <ul class="toc-list">
-
             <li><a href="#summary-page">Tóm tắt đề tài</a> <span class="toc-page">i</span></li>
             <li><a href="#summary-page">Lời cảm ơn</a> <span class="toc-page">i</span></li>
-            <li class="chapter-entry"><a href="#ch1">Chương 1. Giới thiệu và tổng quan dự án</a> <span
-                    class="toc-page">1</span></li>
-            <li><a href="#s1-1">1.1. Lý do lựa chọn đề tài</a> <span class="toc-page">1</span></li>
-            <li><a href="#s1-2">1.2. Mục tiêu của dự án</a> <span class="toc-page">1</span></li>
-            <li><a href="#s1-3">1.3. Phạm vi và đối tượng triển khai</a> <span class="toc-page">2</span></li>
-            <li class="chapter-entry"><a href="#ch2">Chương 2. Khảo sát và phân tích hiện trạng</a> <span
-                    class="toc-page">3</span></li>
-            <li><a href="#s2-1">2.1. Khảo sát cơ sở hạ tầng và không gian trường</a> <span class="toc-page">3</span>
-            </li>
-            <li><a href="#s2-2">2.2. Khảo sát nhu cầu sử dụng WiFi</a> <span class="toc-page">4</span></li>
-            <li><a href="#s2-3">2.3. Đánh giá hiện trạng và vấn đề tồn tại</a> <span class="toc-page">5</span></li>
-            <li class="chapter-entry"><a href="#ch3">Chương 3. Lập kế hoạch, nhân lực và dự trù kinh phí</a> <span
-                    class="toc-page">6</span></li>
-            <li><a href="#s3-1">3.1. Lập kế hoạch và giải pháp dự án</a> <span class="toc-page">6</span></li>
-            <li style="padding-left:2em;"><a href="#s3-1a">Mục tiêu kỹ thuật của hệ thống WiFi</a> <span
-                    class="toc-page">6</span></li>
-            <li style="padding-left:2em;"><a href="#s3-1b">Giải pháp công nghệ và mô hình mạng đề xuất</a> <span
-                    class="toc-page">6</span></li>
-            <li style="padding-left:2em;"><a href="#s3-1c">Kế hoạch triển khai theo các giai đoạn</a> <span
-                    class="toc-page">7</span></li>
-            <li style="padding-left:2em;"><a href="#s3-1d">Tiến độ thực hiện và quản lý công việc</a> <span
-                    class="toc-page">7</span></li>
-            <li><a href="#s3-2">3.2. Tổ chức và quản lý nhân lực</a> <span class="toc-page">8</span></li>
-            <li style="padding-left:2em;"><a href="#s3-2a">Quản lý dự án</a> <span class="toc-page">8</span></li>
-            <li style="padding-left:2em;"><a href="#s3-2b">Nhóm kỹ thuật</a> <span class="toc-page">8</span></li>
-            <li style="padding-left:2em;"><a href="#s3-2c">Nhóm hỗ trợ</a> <span class="toc-page">9</span></li>
-            <li><a href="#s3-3">3.3. Dự trù kinh phí</a> <span class="toc-page">10</span></li>
-            <li style="padding-left:2em;"><a href="#s3-3a">Thiết bị mạng</a> <span class="toc-page">10</span></li>
-            <li style="padding-left:2em;"><a href="#s3-3b">Chi phí lắp đặt</a> <span class="toc-page">10</span></li>
-            <li style="padding-left:2em;"><a href="#s3-3c">Nhân công, vận hành và bảo trì</a> <span
-                    class="toc-page">11</span></li>
-            <li style="padding-left:2em;"><a href="#s3-3d">Chi phí dự phòng</a> <span class="toc-page">11</span></li>
+            <li class="chapter-entry"><a href="#ch1">Chương 1. Giới thiệu và tổng quan dự án</a> <span class="toc-page">2</span></li>
+            <li><a href="#s1-1">1.1. Lý do lựa chọn đề tài</a> <span class="toc-page">2</span></li>
+            <li><a href="#s1-1b">1.2. Cơ sở lý thuyết về quản lý dự án</a> <span class="toc-page">2</span></li>
+            <li><a href="#s1-2">1.3. Mục tiêu của dự án</a> <span class="toc-page">5</span></li>
+            <li><a href="#s1-3">1.4. Phạm vi và đối tượng triển khai</a> <span class="toc-page">5</span></li>
+            <li class="chapter-entry"><a href="#ch2">Chương 2. Khảo sát và phân tích hiện trạng</a> <span class="toc-page">8</span></li>
+            <li><a href="#s2-1">2.1. Khảo sát cơ sở hạ tầng và không gian trường</a> <span class="toc-page">8</span></li>
+            <li><a href="#s2-2">2.2. Khảo sát nhu cầu sử dụng WiFi</a> <span class="toc-page">8</span></li>
+            <li><a href="#s2-3">2.3. Đánh giá hiện trạng và vấn đề tồn tại</a> <span class="toc-page">9</span></li>
+            <li><a href="#s2-4">2.4. Phân tích SWOT của dự án</a> <span class="toc-page">9</span></li>
+            <li><a href="#s2-5">2.5. Phân tích tính khả thi</a> <span class="toc-page">10</span></li>
+            <li class="chapter-entry"><a href="#ch3">Chương 3. Lập kế hoạch, nhân lực và dự trù kinh phí</a> <span class="toc-page">12</span></li>
+            <li><a href="#s3-0">3.0. Cơ cấu phân chia công việc (WBS)</a> <span class="toc-page">12</span></li>
+            <li><a href="#s3-0b">3.0b. Phân tích đường găng (CPM) và PERT</a> <span class="toc-page">14</span></li>
+            <li><a href="#s3-1">3.1. Lập kế hoạch và giải pháp dự án</a> <span class="toc-page">16</span></li>
+            <li><a href="#s3-2">3.2. Tổ chức và quản lý nhân lực</a> <span class="toc-page">19</span></li>
+            <li><a href="#s3-3">3.3. Dự trù kinh phí</a> <span class="toc-page">22</span></li>
+            <li><a href="#s3-4">3.4. Quản lý chất lượng dự án</a> <span class="toc-page">24</span></li>
+            <li class="chapter-entry"><a href="#ch4">Chương 4. Giám sát dự án, đánh giá kết quả</a> <span class="toc-page">27</span></li>
+            <li><a href="#s4-0">4.0. Phương pháp giám sát dự án theo Từ Quang Phương</a> <span class="toc-page">27</span></li>
+            <li><a href="#s4-1">4.1. Giám sát tiến độ và chất lượng</a> <span class="toc-page">28</span></li>
+            <li><a href="#s4-2-matrix">4.2a. Ma trận xác suất — tác động rủi ro</a> <span class="toc-page">30</span></li>
+            <li><a href="#s4-2">4.2. Quản lý rủi ro</a> <span class="toc-page">31</span></li>
         </ul>
     </div>
     <div class="page-footer">
@@ -268,7 +660,7 @@
     </div>
   </div>
 
-<div class="page">
+<div class="page" >
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
@@ -276,23 +668,9 @@
     <div class="page-content">
         <h1 class="toc-title">Mục Lục (tiếp)</h1>
         <ul class="toc-list">
-
-            <li class="chapter-entry"><a href="#ch4">Chương 4. Giám sát dự án, đánh giá kết quả</a> <span
-                    class="toc-page">12</span></li>
-            <li><a href="#s4-1">4.1. Giám sát tiến độ và chất lượng</a> <span class="toc-page">12</span></li>
-            <li style="padding-left:2em;"><a href="#s4-1a">Theo dõi tiến độ dự án</a> <span class="toc-page">12</span>
-            </li>
-            <li style="padding-left:2em;"><a href="#s4-1b">Kiểm soát chất lượng</a> <span class="toc-page">12</span>
-            </li>
-            <li><a href="#s4-2">4.2. Quản lý rủi ro</a> <span class="toc-page">13</span></li>
-            <li style="padding-left:2em;"><a href="#s4-2a">Sự cố kỹ thuật</a> <span class="toc-page">13</span></li>
-            <li style="padding-left:2em;"><a href="#s4-2b">Chậm tiến độ</a> <span class="toc-page">14</span></li>
-            <li style="padding-left:2em;"><a href="#s4-2c">Vượt ngân sách</a> <span class="toc-page">14</span></li>
-            <li style="padding-left:2em;"><a href="#s4-2d">Đề xuất biện pháp phòng ngừa</a> <span
-                    class="toc-page">15</span></li>
-            <li><a href="#s4-3">4.3. Đánh giá, nghiệm thu</a> <span class="toc-page">16</span></li>
-            <li class="chapter-entry"><a href="#conclusion">Kết luận</a> <span class="toc-page">17</span></li>
-            <li class="chapter-entry"><a href="#references">Tài liệu tham khảo</a> <span class="toc-page">18</span></li>
+            <li><a href="#s4-3">4.3. Đánh giá, nghiệm thu</a> <span class="toc-page">35</span></li>
+            <li class="chapter-entry"><a href="#conclusion">Kết luận</a> <span class="toc-page">36</span></li>
+            <li class="chapter-entry"><a href="#references">Tài liệu tham khảo</a> <span class="toc-page">36</span></li>
         </ul>
     </div>
     <div class="page-footer">
@@ -302,95 +680,22 @@
   </div>
 
     <!-- ==================== CHƯƠNG 1 ==================== -->
-    <div class="page" id="ch1">
-        <div class="page-header">
-      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
-      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
-    </div>
-    <div class="page-content">
-        <h1 class="chapter-heading">Chương 1. Giới Thiệu Và Tổng Quan Dự Án</h1>
-        <h2 id="s1-1">1.1. Lý do lựa chọn đề tài</h2>
-        <p>Trong bối cảnh giáo dục hiện đại, Internet là công cụ không thể thiếu. Trường Đại học Hòa Bình hiện đang sở
-            hữu hệ thống cơ sở vật chất khang trang với các giảng đường được trang bị tivi, máy chiếu, âm thanh hiện
-            đại, cùng hệ thống các phòng thực hành mô phỏng "bệnh viện mini" hay các phòng thực hành tin học, ngoại ngữ.
-        </p>
-        <p>Để phát huy tối đa hiệu quả của các trang thiết bị này với số lượng người dùng lớn, việc có một hệ thống mạng
-            WiFi phủ sóng rộng khắp, băng thông lớn và ổn định là vô cùng cấp thiết.</p>
-        <h2 id="s1-2">1.2. Mục tiêu của dự án</h2>
-        <ul>
-            <li>Cung cấp mạng WiFi tốc độ cao, ổn định tại <strong>100% các khu vực</strong> học tập, làm việc và sinh
-                hoạt của trường.</li>
-            <li>Đảm bảo khả năng chịu tải hệ thống đáp ứng được quy mô <strong>5.000 sinh viên</strong> và cán bộ giảng
-                viên.</li>
-            <li>Nâng cao tính <strong>bảo mật</strong> mạng nội bộ và hỗ trợ quản lý truy cập dễ dàng.</li>
-        </ul>
-        <h2 id="s1-3">1.3. Phạm vi và đối tượng triển khai</h2>
-        <h3>Phạm vi:</h3>
-        <ul>
-            <li>Triển khai tại <strong>cơ sở chính</strong> của trường ở Số 8, CC2 — Phố Bùi Xuân Phái, Phường Từ Liêm,
-                Thành phố Hà Nội.</li>
-            <li>Khu vực <strong>Ký túc xá sinh viên</strong> trên trục đường Nguyễn Cơ Thạch — Hàm Nghi.</li>
-        </ul>
-        <h3>Đối tượng hưởng lợi:</h3>
-        <ul>
-            <li>Sinh viên, giảng viên, cán bộ nhân viên nhà trường và khách mời.</li>
-        </ul>
-        </div>
-    <div class="page-footer">
-      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
-      <span class="page-number">1</span>
-    </div>
-    </div>
-
-    <!-- ==================== CHƯƠNG 2 ==================== -->
-    <div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-      <h1 class="chapter-heading">Chương 2. Khảo Sát Và Phân Tích Hiện Trạng</h1>
-        <h2 id="s2-1">2.1. Khảo sát cơ sở hạ tầng và không gian trường</h2>
-        <p>Trường Đại học Hòa Bình có các khu vực không gian đặc thù cần giải pháp mạng khác nhau:</p>
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>Khu vực</th>
-                    <th>Đặc điểm</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Khuôn viên</strong></td>
-                    <td>Rộng rãi, thoáng mát với nhiều cây xanh ở 2 dãy sân trường</td>
-                </tr>
-                <tr>
-                    <td><strong>Giảng đường</strong></td>
-                    <td>Trang bị đầy đủ điều hòa, tivi, máy chiếu, âm thanh</td>
-                </tr>
-                <tr>
-                    <td><strong>Phòng TH/TN</strong></td>
-                    <td>Phòng thí nghiệm hóa sinh, tin học, ngoại ngữ, khu vực thực hành y khoa (Y, Dược, Điều dưỡng)
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>Thư viện</strong></td>
-                    <td>Không gian rộng rãi, thoáng mát, tập trung đông sinh viên tự học và nghiên cứu</td>
-                </tr>
-                <tr>
-                    <td><strong>Ký túc xá</strong></td>
-                    <td>Phòng 45m² (6 SV/phòng), có khu vực học tập riêng, sân chơi, căn-tin</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 id="s2-2">2.2. Khảo sát nhu cầu sử dụng WiFi</h2>
-        <p>Với tổng quy mô lên đến <strong>5.000 sinh viên và giảng viên</strong>, nhu cầu truy cập Internet để tra cứu
-            tài liệu Thư viện số, học trực tuyến, thực hành tại các phòng máy hay giải trí tại ký túc xá là cực kỳ lớn.
-        </p>
-        <div class="note-box">
-            <strong>📊 Ước tính kỹ thuật:</strong> Hệ thống cần thiết kế chịu tải khoảng <strong>3.500 — 4.000 thiết bị
-                truy cập đồng thời</strong> (Concurrent Users) trong giờ cao điểm.
-        </div>
+      <h1 class="chapter-heading">Chương 1. Giới Thiệu Và Tổng Quan Dự Án</h1>
+      <h2 id="s1-1">1.1. Lý do lựa chọn đề tài</h2>
+      <p>Trong bối cảnh giáo dục hiện đại, Internet là công cụ không thể thiếu. Trường Đại học Hòa Bình hiện đang sở
+        hữu hệ thống cơ sở vật chất khang trang với các giảng đường được trang bị tivi, máy chiếu, âm thanh hiện
+        đại, cùng hệ thống các phòng thực hành mô phỏng "bệnh viện mini" hay các phòng thực hành tin học, ngoại ngữ.
+      </p>
+      <p>Để phát huy tối đa hiệu quả của các trang thiết bị này với số lượng người dùng lớn, việc có một hệ thống mạng
+        WiFi phủ sóng rộng khắp, băng thông lớn và ổn định là vô cùng cấp thiết.</p>
+
+      <h2 id="s1-1b">1.2. Cơ sở lý thuyết về quản lý dự án</h2>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -398,20 +703,35 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-      <h2 id="s2-3">2.3. Đánh giá hiện trạng và vấn đề tồn tại</h2>
-        <ul>
-            <li><strong>Vấn đề vật lý:</strong> Các phòng thí nghiệm y khoa hay phòng máy có nhiều vách ngăn cách
-                âm/cách nhiệt dày có thể làm suy giảm tín hiệu sóng WiFi trầm trọng.</li>
-            <li><strong>Nghẽn băng thông diện rộng:</strong> Với 5.000 người dùng, rủi ro nghẽn mạng (bottleneck) tại
-                các điểm tập trung như thư viện hoặc căn-tin ký túc xá là rất cao nếu thiết bị cấp phát IP (DHCP) không
-                đủ mạnh.</li>
-        </ul>
+      <h3 id="s1-1b-1">a) Khái niệm dự án và quản lý dự án</h3>
+      <p>Theo Từ Quang Phương (2019), <strong>dự án</strong> là một tập hợp các hoạt động có liên quan đến nhau được
+        thực hiện
+        trong một khoảng thời gian nhất định, với nguồn lực có giới hạn, nhằm đạt được mục tiêu cụ thể đã đề ra.
+        Dự án phủ sóng WiFi cho Trường ĐHHB mang đầy đủ các đặc trưng của một dự án đầu tư: tính mục tiêu rõ ràng,
+        tính thời hạn, tính duy nhất và tính phức tạp.</p>
+      <p><strong>Quản lý dự án (Project Management)</strong> là quá trình lập kế hoạch, tổ chức, chỉ đạo và kiểm soát
+        các nguồn lực của tổ chức trong một thời gian ngắn nhất để hoàn thành các mục tiêu đã xác định. Quá trình này
+        bao gồm 5 nhóm quy trình chính:</p>
+      <ul>
+        <li><strong>Khởi tạo (Initiating):</strong> Xác định dự án, lập điều lệ dự án, nhận diện các bên liên quan.</li>
+        <li><strong>Lập kế hoạch (Planning):</strong> Xây dựng phạm vi, lịch trình, ngân sách, kế hoạch chất lượng,
+          nguồn lực, truyền thông và quản lý rủi ro.</li>
+        <li><strong>Thực hiện (Executing):</strong> Điều phối nhân lực, mua sắm thiết bị, triển khai hạ tầng theo kế
+          hoạch.</li>
+        <li><strong>Giám sát & kiểm soát (Monitoring & Controlling):</strong> Theo dõi tiến độ, kiểm soát chất lượng,
+          quản lý biến đổi.</li>
+        <li><strong>Kết thúc (Closing):</strong> Nghiệm thu, bàn giao, đánh giá bài học kinh nghiệm.</li>
+      </ul>
+
+      <h3 id="s1-1b-2">b) Phương pháp luận và công cụ quản lý dự án</h3>
+      <p>Trong giáo trình Quản lý Dự án, Từ Quang Phương nhấn mạnh việc áp dụng các công cụ khoa học vào quản lý dự án.
+        Dự án WiFi ĐHHB sẽ áp dụng các phương pháp sau:</p>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -419,20 +739,60 @@
     </div>
   </div>
 
-    <!-- ==================== CHƯƠNG 3 ==================== -->
-    <div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h1 class="chapter-heading">Chương 3. Lập Kế Hoạch, Nhân Lực Và Dự Trù Kinh Phí</h1>
-        <div class="note-box">
-            <strong>📝 Lưu ý:</strong> Toàn bộ thông số kỹ thuật, số liệu dự toán dưới đây được tối ưu riêng cho quy mô
-            5.000 người, sử dụng kiến thức chuyên ngành CNTT ngoài tài liệu.
-        </div>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Công cụ</th>
+            <th>Mô tả</th>
+            <th>Áp dụng trong dự án</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>WBS</strong></td>
+            <td>Cơ cấu phân chia công việc — phân rã dự án thành các gói công việc nhỏ</td>
+            <td>Phân tách 5 giai đoạn triển khai thành ≥ 25 gói công việc</td>
+          </tr>
+          <tr>
+            <td><strong>Biểu đồ Gantt</strong></td>
+            <td>Biểu đồ thanh ngang hiển thị lịch trình theo thời gian</td>
+            <td>Lập tiến độ 45 ngày cho toàn bộ dự án</td>
+          </tr>
+          <tr>
+            <td><strong>PERT/CPM</strong></td>
+            <td>Kỹ thuật đánh giá chương trình / Phương pháp đường găng</td>
+            <td>Xác định đường găng và các công việc trọng yếu</td>
+          </tr>
+          <tr>
+            <td><strong>Ma trận rủi ro</strong></td>
+            <td>Đánh giá xác suất × tác động của các rủi ro</td>
+            <td>Lập bảng 10 rủi ro chính kèm biện pháp ứng phó</td>
+          </tr>
+          <tr>
+            <td><strong>EVM</strong></td>
+            <td>Quản lý giá trị thu được — đo lường hiệu quả chi phí và tiến độ</td>
+            <td>Giám sát CPI, SPI theo từng giai đoạn</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <h2 id="s3-1">3.1. Lập kế hoạch và giải pháp dự án</h2>
+      <h3 id="s1-1b-3">c) Mô hình tổ chức quản lý dự án</h3>
+      <p>Theo Từ Quang Phương, có 3 mô hình tổ chức quản lý dự án chính: <strong>Chức năng (Functional)</strong>,
+        <strong>Ma trận (Matrix)</strong> và <strong>Dự án độc lập (Projectized)</strong>. Dự án WiFi ĐHHB áp dụng
+        <strong>mô hình ma trận yếu (Weak Matrix)</strong> phù hợp với quy mô vừa phải và tận dụng nguồn nhân lực
+        sẵn có của nhà trường:
+      </p>
+      <ul>
+        <li><strong>Giám đốc dự án</strong> (PM): Chịu trách nhiệm tổng thể, báo cáo Ban Giám hiệu.</li>
+        <li><strong>Nhóm kỹ thuật:</strong> Biệt phái từ Khoa Công nghệ Thông tin, phụ trách thiết kế hạ tầng mạng.</li>
+        <li><strong>Nhóm hỗ trợ:</strong> Kết hợp từ Phòng Quản trị Thiết bị và đơn vị thi công bên ngoài.</li>
+      </ul>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -440,27 +800,21 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s3-1a">a) Mục tiêu kỹ thuật của hệ thống WiFi</h3>
-        <ul>
-            <li>Phủ sóng WiFi <strong>100%</strong> diện tích giảng đường, thư viện, phòng thực hành, khuôn viên và ký
-                túc xá.</li>
-            <li>Hệ thống chịu tải đồng thời <strong>3.500 — 4.000 thiết bị</strong> trong giờ cao điểm.</li>
-            <li>Tốc độ tối thiểu <strong>15 Mbps/user</strong> cho mọi khu vực.</li>
-            <li>Đảm bảo <strong>chuyển vùng liền mạch</strong> (Seamless Roaming) giữa các AP trong cùng khu vực.</li>
-            <li>Hệ thống bảo mật theo chuẩn <strong>WPA3-Enterprise</strong>, xác thực người dùng qua RADIUS.</li>
-        </ul>
-
-        <h3 id="s3-1b">b) Giải pháp công nghệ và mô hình mạng đề xuất</h3>
-        <p>Triển khai hệ thống <strong>WiFi 6 (802.11ax)</strong> — chuẩn mạng không dây thế hệ mới nhất, hỗ trợ công
-            nghệ
-            OFDMA và MU-MIMO, tối ưu cho môi trường đông người dùng.</p>
-        <p><strong>Mô hình mạng ba tầng:</strong></p>
+      <h2 id="s1-2">1.3. Mục tiêu của dự án</h2>
+      <ul>
+        <li>Cung cấp mạng WiFi tốc độ cao, ổn định tại <strong>100% các khu vực</strong> học tập, làm việc và sinh
+          hoạt của trường.</li>
+        <li>Đảm bảo khả năng chịu tải hệ thống đáp ứng được quy mô <strong>5.000 sinh viên</strong> và cán bộ giảng
+          viên.</li>
+        <li>Nâng cao tính <strong>bảo mật</strong> mạng nội bộ và hỗ trợ quản lý truy cập dễ dàng.</li>
+      </ul>
+      <h2 id="s1-3">1.4. Phạm vi và đối tượng triển khai</h2>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -468,63 +822,19 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<ul>
-            <li><strong>Core Layer:</strong> Core Switch 10G + Firewall — xử lý định tuyến trung tâm, phân chia VLAN,
-                quản lý an ninh mạng.</li>
-            <li><strong>Distribution Layer:</strong> 15 Switch Access PoE 24 port — cấp nguồn PoE cho AP, kết nối đường
-                trục.</li>
-            <li><strong>Access Layer:</strong> 120 Access Point WiFi 6 (Indoor/Outdoor) — phát sóng trực tiếp đến người
-                dùng.</li>
-        </ul>
-        <p>Toàn bộ hệ thống được quản lý tập trung qua <strong>WiFi Controller</strong>, cho phép giám sát, cấu hình và
-            xử lý sự cố từ xa.</p>
-
-        <h3 id="s3-1c">c) Kế hoạch triển khai theo các giai đoạn</h3>
-        <p class="no-indent">Dự kiến <strong>45 ngày</strong> (01/02/2025 – 17/03/2025), chia thành 5 giai đoạn:</p>
-        <table class="content-table timeline-table">
-            <thead>
-                <tr>
-                    <th>Giai đoạn</th>
-                    <th>Thời gian</th>
-                    <th>Nội dung</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>GĐ 1</td>
-                    <td>01/02 – 05/02</td>
-                    <td>Khảo sát thực địa, vẽ bản đồ nhiệt (Heatmap) sóng WiFi tại các giảng đường, thư viện, phòng thực
-                        hành và KTX</td>
-                </tr>
-                <tr>
-                    <td>GĐ 2</td>
-                    <td>06/02 – 12/02</td>
-                    <td>Chốt danh sách vật tư, đặt hàng và nhập kho thiết bị (Switch, AP, Firewall, cáp mạng)</td>
-                </tr>
-                <tr>
-                    <td>GĐ 3</td>
-                    <td>13/02 – 05/03</td>
-                    <td>Thi công kéo cáp quang nội bộ, rải cáp Cat6 và khoan lắp AP (chủ yếu ca đêm &amp; cuối tuần)
-                    </td>
-                </tr>
-                <tr>
-                    <td>GĐ 4</td>
-                    <td>06/03 – 15/03</td>
-                    <td>Cấu hình Controller, chia VLAN, thiết lập Policy bảo mật và đo kiểm băng thông</td>
-                </tr>
-                <tr>
-                    <td>GĐ 5</td>
-                    <td>16/03 – 17/03</td>
-                    <td>Chạy thử nghiệm, đào tạo chuyển giao cho bộ phận IT trường và ký biên bản nghiệm thu</td>
-                </tr>
-            </tbody>
-        </table>
+      <h3>Phạm vi:</h3>
+      <ul>
+        <li>Triển khai tại <strong>cơ sở chính</strong> của trường ở Số 8, CC2 — Phố Bùi Xuân Phái, Phường Từ Liêm,
+          Thành phố Hà Nội.</li>
+        <li>Khu vực <strong>Ký túc xá sinh viên</strong> trên trục đường Nguyễn Cơ Thạch — Hàm Nghi.</li>
+      </ul>
+      <h3>Đối tượng hưởng lợi:</h3>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -532,25 +842,15 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s3-1d">d) Tiến độ thực hiện và quản lý công việc</h3>
-        <p>Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để theo dõi tiến độ từng giai đoạn.
-            Mỗi task được gán
-            người phụ trách, deadline và trạng thái (To-do / In Progress / Done). Huy và Phương họp nhanh
-            <strong>Daily Standup 15 phút</strong> mỗi sáng để rà soát khối lượng công việc hoàn thành và các vướng mắc
-            cần giải quyết.
-        </p>
-
-        <h2 id="s3-2">3.2. Tổ chức và quản lý nhân lực</h2>
-        <p class="no-indent">Dự án được đồng quản lý bởi 2 học viên, phân chia nhiệm vụ và chấm công (Timesheet) như
-            sau:</p>
-
-        <h3 id="s3-2a">a) Quản lý dự án</h3>
+      <ul>
+        <li>Sinh viên, giảng viên, cán bộ nhân viên nhà trường và khách mời.</li>
+      </ul>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -558,37 +858,55 @@
     </div>
   </div>
 
-<div class="page">
+  <!-- ==================== CHƯƠNG 2 ==================== -->
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<div class="role-card">
-            <div class="role-name">Nguyễn Hữu Huy</div>
-            <div class="role-title">Giám đốc dự án (Project Manager)</div>
-            <p class="no-indent"><strong>Trách nhiệm:</strong></p>
-            <ul>
-                <li>Lập kế hoạch tổng thể, phân bổ nguồn lực và kiểm soát tiến độ dự án.</li>
-                <li>Phê duyệt các quyết định kỹ thuật và tài chính quan trọng.</li>
-                <li>Báo cáo tiến độ cho giảng viên hướng dẫn và Ban Giám hiệu nhà trường.</li>
-            </ul>
-            <p class="no-indent" style="margin-top:6px;"><strong>Chấm công:</strong> Tham gia Full-time (<strong>45 ngày
-                    công</strong>).</p>
-        </div>
-
-        <h3 id="s3-2b">b) Nhóm kỹ thuật</h3>
-        <div class="role-card">
-            <div class="role-name">Nguyễn Hữu Huy</div>
-            <div class="role-title">Trưởng nhóm Kỹ thuật (Tech Lead)</div>
-            <p class="no-indent"><strong>Công việc kỹ thuật chuyên sâu:</strong></p>
-            <ul>
-                <li>Thiết kế kiến trúc mạng tổng thể (Core, Distribution, Access).</li>
-                <li>Trực tiếp cấu hình Core Switch, Firewall, và hệ thống quản lý WiFi Controller.</li>
-                <li>Xử lý các sự cố kỹ thuật phức tạp (Cấp phát IP, định tuyến, lỗi thiết bị).</li>
-                <li>Đo kiểm, tối ưu băng thông và chất lượng sóng toàn hệ thống.</li>
-            </ul>
-        </div>
+      <h1 class="chapter-heading">Chương 2. Khảo Sát Và Phân Tích Hiện Trạng</h1>
+      <h2 id="s2-1">2.1. Khảo sát cơ sở hạ tầng và không gian trường</h2>
+      <p>Trường Đại học Hòa Bình có các khu vực không gian đặc thù cần giải pháp mạng khác nhau:</p>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Khu vực</th>
+            <th>Đặc điểm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Khuôn viên</strong></td>
+            <td>Rộng rãi, thoáng mát với nhiều cây xanh ở 2 dãy sân trường</td>
+          </tr>
+          <tr>
+            <td><strong>Giảng đường</strong></td>
+            <td>Trang bị đầy đủ điều hòa, tivi, máy chiếu, âm thanh</td>
+          </tr>
+          <tr>
+            <td><strong>Phòng TH/TN</strong></td>
+            <td>Phòng thí nghiệm hóa sinh, tin học, ngoại ngữ, khu vực thực hành y khoa (Y, Dược, Điều dưỡng)
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Thư viện</strong></td>
+            <td>Không gian rộng rãi, thoáng mát, tập trung đông sinh viên tự học và nghiên cứu</td>
+          </tr>
+          <tr>
+            <td><strong>Ký túc xá</strong></td>
+            <td>Phòng 45m² (6 SV/phòng), có khu vực học tập riêng, sân chơi, căn-tin</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="s2-2">2.2. Khảo sát nhu cầu sử dụng WiFi</h2>
+      <p>Với tổng quy mô lên đến <strong>5.000 sinh viên và giảng viên</strong>, nhu cầu truy cập Internet để tra cứu
+        tài liệu Thư viện số, học trực tuyến, thực hành tại các phòng máy hay giải trí tại ký túc xá là cực kỳ lớn.
+      </p>
+      <div class="note-box">
+        <strong>📊 Ước tính kỹ thuật:</strong> Hệ thống cần thiết kế chịu tải khoảng <strong>3.500 — 4.000 thiết bị
+          truy cập đồng thời</strong> (Concurrent Users) trong giờ cao điểm.
+      </div>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -596,32 +914,51 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s3-2c">c) Nhóm hỗ trợ</h3>
-        <div class="role-card">
-            <div class="role-name">Nguyễn Thị Phương</div>
-            <div class="role-title">Phó Giám đốc dự án kiêm Trưởng nhóm Triển khai &amp; Hỗ trợ</div>
-            <p class="no-indent"><strong>Công việc:</strong></p>
-            <ul>
-                <li>Khảo sát vị trí lắp đặt thực tế, xin giấy phép thi công từ Ban quản lý tòa nhà và KTX.</li>
-                <li>Giám sát đội thi công kéo cáp, đảm bảo thẩm mỹ tại các phòng học được trang bị hiện đại (tivi, máy
-                    chiếu).</li>
-                <li>Quản lý ngân sách, mua sắm vật tư và soạn thảo hồ sơ nghiệm thu.</li>
-            </ul>
-            <p class="no-indent" style="margin-top:6px;"><strong>Chấm công:</strong> Tham gia Full-time (<strong>45 ngày
-                    công</strong>).</p>
-        </div>
+      <h2 id="s2-3">2.3. Đánh giá hiện trạng và vấn đề tồn tại</h2>
+      <ul>
+        <li><strong>Vấn đề vật lý:</strong> Các phòng thí nghiệm y khoa hay phòng máy có nhiều vách ngăn cách
+          âm/cách nhiệt dày có thể làm suy giảm tín hiệu sóng WiFi trầm trọng.</li>
+        <li><strong>Nghẽn băng thông diện rộng:</strong> Với 5.000 người dùng, rủi ro nghẽn mạng (bottleneck) tại
+          các điểm tập trung như thư viện hoặc căn-tin ký túc xá là rất cao nếu thiết bị cấp phát IP (DHCP) không
+          đủ mạnh.</li>
+      </ul>
 
-        <div class="role-card" style="border-color:var(--border);">
-            <div class="role-name">Đội thi công mạng (Outsource)</div>
-            <div class="role-title">6 nhân viên đi dây cáp, khoan trần lắp AP</div>
-            <p class="no-indent">Phương trực tiếp chấm công cho đội này theo tiến độ hoàn thành từng tầng.</p>
-        </div>
+      <h2 id="s2-4">2.4. Phân tích SWOT của dự án</h2>
+      <p>Áp dụng phương pháp phân tích SWOT nhằm đánh giá toàn diện tính khả thi và rủi ro tiềm ẩn của dự án:</p>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th style="width:50%">Điểm mạnh (Strengths)</th>
+            <th style="width:50%">Điểm yếu (Weaknesses)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul style="margin-left:15px; list-style-type:disc;">
+                <li>Ban Giám hiệu cam kết hỗ trợ mạnh mẽ</li>
+                <li>Cơ sở vật chất trường mới, hạ tầng điện ổn định</li>
+                <li>Có Khoa CNTT với đội ngũ giảng viên chuyên môn cao</li>
+                <li>Nhu cầu WiFi rất lớn, dự án được toàn trường ủng hộ</li>
+              </ul>
+            </td>
+            <td>
+              <ul style="margin-left:15px; list-style-type:disc;">
+                <li>Chưa có hệ thống WiFi tập trung trước đó</li>
+                <li>Ngân sách giới hạn trong khung ngân sách nhà trường</li>
+                <li>Chưa có đội ngũ chuyên trách vận hành mạng</li>
+                <li>Một số khu vực có kết cấu khó kéo cáp mạng</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -629,51 +966,51 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h2 id="s3-3">3.3. Dự trù kinh phí</h2>
-        <p class="no-indent" style="font-style:italic;color:var(--text-light);font-size:11pt;">(Bảng dự toán giả định
-            cho quy mô 5.000 user)</p>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th style="width:50%">Cơ hội (Opportunities)</th>
+            <th style="width:50%">Thách thức (Threats)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul style="margin-left:15px; list-style-type:disc;">
+                <li>Công nghệ WiFi 6 (802.11ax) đã phổ biến, giá thành hợp lý</li>
+                <li>Có thể mời nhà cung cấp hỗ trợ kỹ thuật và bảo hành dài hạn</li>
+                <li>Nâng cao thương hiệu trường với hạ tầng số hiện đại</li>
+                <li>Nền tảng cho chuyển đổi số giáo dục trong tương lai</li>
+              </ul>
+            </td>
+            <td>
+              <ul style="margin-left:15px; list-style-type:disc;">
+                <li>Sóng WiFi bị nhiễu trong không gian có nhiều thiết bị</li>
+                <li>An ninh mạng: nguy cơ tấn công, truy cập trái phép</li>
+                <li>Tốc độ phát triển công nghệ nhanh, thiết bị dễ lạc hậu</li>
+                <li>Biến động giá thiết bị nhập khẩu</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-        <h3 id="s3-3a">a) Thiết bị mạng</h3>
-        <table class="content-table" style="margin-bottom:8px;">
-            <thead>
-                <tr>
-                    <th>STT</th>
-                    <th>Hạng mục</th>
-                    <th>SL</th>
-                    <th style="text-align:right;">Đơn giá (VNĐ)</th>
-                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Core Switch 10G &amp; Firewall</td>
-                    <td>2 bộ</td>
-                    <td style="text-align:right;">85.000.000</td>
-                    <td style="text-align:right;font-weight:700;">170.000.000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Access Point WiFi 6 (Indoor/Outdoor)</td>
-                    <td>120 chiếc</td>
-                    <td style="text-align:right;">4.500.000</td>
-                    <td style="text-align:right;font-weight:700;">540.000.000</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Switch Access PoE 24 port</td>
-                    <td>15 chiếc</td>
-                    <td style="text-align:right;">12.000.000</td>
-                    <td style="text-align:right;font-weight:700;">180.000.000</td>
-                </tr>
-            </tbody>
-        </table>
+      <h2 id="s2-5">2.5. Phân tích tính khả thi</h2>
+      <h3>a) Khả thi kỹ thuật</h3>
+      <p>Công nghệ WiFi 6 (802.11ax) đã được thương mại hóa rộng rãi với các hãng lớn như Cisco, Aruba, TP-Link đều có
+        sản phẩm phù hợp quy mô trường học. Băng thông lý thuyết lên đến <strong>9.6 Gbps</strong>, hỗ trợ OFDMA
+        (Orthogonal Frequency-Division Multiple Access) cho phép phục vụ nhiều thiết bị đồng thời mà không gây nghẽn.
+      </p>
+      <h3>b) Khả thi tài chính</h3>
+      <p>Tổng dự toán sơ bộ khoảng <strong>~1,265 tỷ VNĐ</strong> nằm trong khung ngân sách đầu tư hạ tầng CNTT của
+        nhà trường giai đoạn 2025-2027. Chi phí vận hành hàng năm ước tính <strong>~180 triệu VNĐ</strong> (nhân sự
+        IT + điện + bảo trì) hoàn toàn nằm trong khả năng chi thường xuyên.</p>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -681,33 +1018,16 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s3-3b">b) Chi phí lắp đặt</h3>
-        <table class="content-table" style="margin-bottom:8px;">
-            <thead>
-                <tr>
-                    <th>STT</th>
-                    <th>Hạng mục</th>
-                    <th>SL</th>
-                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>4</td>
-                    <td>Cáp mạng Cat6, ống gen, vật tư phụ</td>
-                    <td>Lô</td>
-                    <td style="text-align:right;font-weight:700;">120.000.000</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 id="s3-3c">c) Nhân công, vận hành và bảo trì</h3>
+      <h3>c) Khả thi về nhân lực và tổ chức</h3>
+      <p>Trường có Khoa CNTT với <strong>~15 giảng viên</strong> có chuyên môn mạng máy tính. Phòng Quản trị Thiết bị
+        có kinh nghiệm triển khai hạ tầng. Ngoài ra, nhà cung cấp thiết bị sẽ cử kỹ sư hỗ trợ trong giai đoạn
+        lắp đặt và chuyển giao công nghệ.</p>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -715,60 +1035,104 @@
     </div>
   </div>
 
-<div class="page">
+  <!-- ==================== CHƯƠNG 3 ==================== -->
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<table class="content-table" style="margin-bottom:8px;">
-            <thead>
-                <tr>
-                    <th>STT</th>
-                    <th>Hạng mục</th>
-                    <th>SL</th>
-                    <th style="text-align:right;">Đơn giá (VNĐ)</th>
-                    <th style="text-align:right;">Thành tiền (VNĐ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>5</td>
-                    <td>Nhân công thi công (6 thợ × 20 ngày)</td>
-                    <td>120 công</td>
-                    <td style="text-align:right;">500.000</td>
-                    <td style="text-align:right;font-weight:700;">60.000.000</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Phí cấu hình, quản lý dự án</td>
-                    <td>2 gói</td>
-                    <td style="text-align:right;">40.000.000</td>
-                    <td style="text-align:right;font-weight:700;">80.000.000</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 id="s3-3d">d) Chi phí dự phòng</h3>
-        <div class="budget-highlight">
-            <table class="content-table" style="margin:0;">
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Hạng mục</th>
-                        <th style="text-align:right;">Thành tiền (VNĐ)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>7</td>
-                        <td>Chi phí dự phòng phát sinh (10%)</td>
-                        <td style="text-align:right;font-weight:700;">115.000.000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="total-line">TỔNG NGÂN SÁCH DỰ KIẾN: ~ 1.265.000.000 VNĐ</div>
-        </div>
+      <h1 class="chapter-heading">Chương 3. Lập Kế Hoạch, Nhân Lực Và Dự Trù Kinh Phí</h1>
+      <h2 id="s3-0">3.0. Cơ cấu phân chia công việc (WBS)</h2>
+      <p>Theo phương pháp luận của Từ Quang Phương, <strong>WBS (Work Breakdown Structure)</strong> là công cụ nền tảng
+        trong lập kế hoạch dự án. WBS phân rã toàn bộ phạm vi dự án thành các gói công việc (Work Package) nhỏ,
+        dễ quản lý và có thể giao cho từng cá nhân/nhóm cụ thể.</p>
+      <p>Dự án phủ sóng WiFi ĐHHB được phân tách theo <strong>5 cấp</strong> như sau:</p>
+<table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>Mã WBS</th>
+            <th>Gói công việc</th>
+            <th>Thời gian</th>
+            <th>Phụ trách</th>
+          </tr>
+        </thead>
+<tbody>
+          <tr>
+            <td><strong>1.0</strong></td>
+            <td><strong>Khảo sát & Thiết kế</strong></td>
+            <td>10 ngày</td>
+            <td>Nhóm KT</td>
+          </tr>
+          <tr>
+            <td>1.1</td>
+            <td>Khảo sát mặt bằng, đo vẽ sơ đồ tầng</td>
+            <td>3 ngày</td>
+            <td>KS Mạng</td>
+          </tr>
+          <tr>
+            <td>1.2</td>
+            <td>Phân tích tải mạng, tính toán số AP</td>
+            <td>2 ngày</td>
+            <td>KS Mạng</td>
+          </tr>
+          <tr>
+            <td>1.3</td>
+            <td>Thiết kế topology mạng (Core-Distribution-Access)</td>
+            <td>3 ngày</td>
+            <td>KS Hệ thống</td>
+          </tr>
+          <tr>
+            <td>1.4</td>
+            <td>Lập bản vẽ kỹ thuật và phê duyệt thiết kế</td>
+            <td>2 ngày</td>
+            <td>PM + BGH</td>
+          </tr>
+          <tr>
+            <td><strong>2.0</strong></td>
+            <td><strong>Mua sắm thiết bị</strong></td>
+            <td>10 ngày</td>
+            <td>PM + HC</td>
+          </tr>
+          <tr>
+            <td>2.1</td>
+            <td>Lập danh mục thiết bị, đấu thầu/báo giá</td>
+            <td>3 ngày</td>
+            <td>HC</td>
+          </tr>
+          <tr>
+            <td>2.2</td>
+            <td>Ký hợp đồng mua sắm, đặt hàng</td>
+            <td>2 ngày</td>
+            <td>PM</td>
+          </tr>
+          <tr>
+            <td>2.3</td>
+            <td>Nhận hàng, kiểm tra chất lượng đầu vào</td>
+            <td>5 ngày</td>
+            <td>KCS</td>
+          </tr>
+          <tr>
+            <td><strong>3.0</strong></td>
+            <td><strong>Thi công lắp đặt</strong></td>
+            <td>15 ngày</td>
+            <td>Nhóm TC</td>
+          </tr>
+          <tr>
+            <td>3.1</td>
+            <td>Kéo cáp UTP Cat6/cáp quang backbone</td>
+            <td>5 ngày</td>
+            <td>Thầu phụ</td>
+          </tr>
+          <tr>
+            <td>3.2</td>
+            <td>Lắp đặt tủ rack, switch, controller</td>
+            <td>3 ngày</td>
+            <td>KS Mạng</td>
+          </tr>
+          </tbody>
+</table>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -776,20 +1140,85 @@
     </div>
   </div>
 
-    <!-- ==================== CHƯƠNG 4 ==================== -->
-    <div class="page">
+<div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h1 class="chapter-heading">Chương 4. Giám Sát Dự Án, Đánh Giá Kết Quả</h1>
-        <div class="note-box">
-            <strong>📝 Lưu ý:</strong> Các kiến thức về quy trình quản trị dự án trong chương này được bổ sung từ thực
-            tiễn quản lý dự án CNTT.
-        </div>
+      <table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>Mã WBS</th>
+            <th>Gói công việc</th>
+            <th>Thời gian</th>
+            <th>Phụ trách</th>
+          </tr>
+        </thead>
+<tbody><tr>
+            <td>3.3</td>
+            <td>Lắp đặt Access Point (AP) tại các vị trí</td>
+            <td>5 ngày</td>
+            <td>Thầu phụ + KT</td>
+          </tr>
+          <tr>
+            <td>3.4</td>
+            <td>Đấu nối, dán nhãn, nghiệm thu vật lý</td>
+            <td>2 ngày</td>
+            <td>KCS</td>
+          </tr>
+          <tr>
+            <td><strong>4.0</strong></td>
+            <td><strong>Cấu hình & kiểm thử</strong></td>
+            <td>7 ngày</td>
+            <td>Nhóm KT</td>
+          </tr>
+          <tr>
+            <td>4.1</td>
+            <td>Cấu hình VLAN, DHCP, Firewall, RADIUS</td>
+            <td>3 ngày</td>
+            <td>KS Hệ thống</td>
+          </tr>
+          <tr>
+            <td>4.2</td>
+            <td>Kiểm thử tải (load testing) — 3.500+ clients</td>
+            <td>2 ngày</td>
+            <td>QA</td>
+          </tr>
+          <tr>
+            <td>4.3</td>
+            <td>Kiểm thử bảo mật, pentest nội bộ</td>
+            <td>2 ngày</td>
+            <td>KS ATTT</td>
+          </tr>
+          <tr>
+            <td><strong>5.0</strong></td>
+            <td><strong>Nghiệm thu & bàn giao</strong></td>
+            <td>3 ngày</td>
+            <td>PM</td>
+          </tr>
+          <tr>
+            <td>5.1</td>
+            <td>Nghiệm thu với Hội đồng kỹ thuật</td>
+            <td>1 ngày</td>
+            <td>PM + BGH</td>
+          </tr>
+          <tr>
+            <td>5.2</td>
+            <td>Đào tạo đội ngũ IT vận hành</td>
+            <td>1 ngày</td>
+            <td>Nhà CC</td>
+          </tr>
+          <tr>
+            <td>5.3</td>
+            <td>Bàn giao tài liệu, khởi động vận hành</td>
+            <td>1 ngày</td>
+            <td>PM</td>
+          </tr>
+        </tbody>
+</table>
 
-        <h2 id="s4-1">4.1. Giám sát tiến độ và chất lượng</h2>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -797,27 +1226,115 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s4-1a">a) Theo dõi tiến độ dự án</h3>
-        <ul>
-            <li><strong>Công cụ:</strong> Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để
-                theo dõi các đầu việc, gán người phụ trách và deadline cho từng task.</li>
-            <li><strong>Báo cáo hàng ngày (Daily Standup):</strong> Huy và Phương họp nhanh 15 phút mỗi sáng để rà soát:
-                <em>"Hôm qua thợ thi công được mấy phòng? Có vướng mắc gì ở phòng thí nghiệm Y khoa/Mỹ thuật
-                    không?"</em>
-            </li>
-            <li><strong>Báo cáo tuần:</strong> Phương tổng hợp file báo cáo tiến độ và mức tiêu hao vật tư gửi cho Ban
-                Giám hiệu nhà trường vào chiều thứ Sáu hàng tuần.</li>
-            <li><strong>Milestone kiểm tra:</strong> Cuối mỗi giai đoạn (GĐ 1-5), Huy kiểm tra và ký xác nhận hoàn thành
-                trước khi chuyển sang giai đoạn tiếp theo.</li>
-        </ul>
-
-        <h3 id="s4-1b">b) Kiểm soát chất lượng</h3>
+      <h2 id="s3-0b">3.0b. Phân tích đường găng (CPM) và PERT</h2>
+      <p>Theo Từ Quang Phương, <strong>phương pháp đường găng (Critical Path Method — CPM)</strong> giúp xác định chuỗi
+        các công việc liên tiếp có tổng thời gian dài nhất, quyết định thời gian hoàn thành sớm nhất của dự án.
+        Bất kỳ sự chậm trễ nào trên đường găng đều trực tiếp kéo dài tổng thời gian dự án.</p>
+      <p><strong>Kỹ thuật PERT (Program Evaluation and Review Technique)</strong> mở rộng CPM bằng cách sử dụng
+        <strong>3 ước tính thời gian</strong> cho mỗi công việc: lạc quan (tₒ), trung bình (tₘ), bi quan (tₚ).
+      </p>
+      <p>Công thức PERT: <strong>tₑ = (tₒ + 4tₘ + tₚ) / 6</strong></p>
+<table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>Công việc</th>
+            <th>Phụ thuộc</th>
+            <th>tₒ (ngày)</th>
+            <th>tₘ (ngày)</th>
+            <th>tₚ (ngày)</th>
+            <th>tₑ (ngày)</th>
+          </tr>
+        </thead>
+<tbody>
+          <tr>
+            <td>1.1 Khảo sát</td>
+            <td>—</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <td>1.2 Phân tích tải</td>
+            <td>1.1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2.2</td>
+          </tr>
+          <tr>
+            <td>1.3 Thiết kế topology</td>
+            <td>1.2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <td>1.4 Phê duyệt</td>
+            <td>1.3</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>2.1 Lập danh mục</td>
+            <td>1.4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <td>2.2 Ký hợp đồng</td>
+            <td>2.1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2.2</td>
+          </tr>
+          <tr>
+            <td>2.3 Nhận hàng</td>
+            <td>2.2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>10</td>
+            <td>5.5</td>
+          </tr>
+          <tr>
+            <td>3.1 Kéo cáp</td>
+            <td>2.3</td>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>5.2</td>
+          </tr>
+          <tr>
+            <td>3.2 Lắp switch</td>
+            <td>2.3</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <td>3.3 Lắp AP</td>
+            <td>3.1, 3.2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>5.2</td>
+          </tr>
+          </tbody>
+</table>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -831,24 +1348,82 @@
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<ul>
-            <li><strong>Đo kiểm sóng WiFi:</strong> Sử dụng phần mềm <strong>Ekahau</strong> hoặc <strong>WiFi
-                    Analyzer</strong> đo cường độ tín hiệu (dBm) tại từng khu vực sau khi lắp đặt. Yêu cầu tối thiểu
-                <strong>-65 dBm</strong> tại mọi điểm.
-            </li>
-            <li><strong>Kiểm tra tốc độ:</strong> Chạy <strong>iPerf3</strong> kiểm tra băng thông thực tế, đảm bảo đạt
-                tối thiểu <strong>15 Mbps/user</strong>.</li>
-            <li><strong>Kiểm tra chuyển vùng:</strong> Test Seamless Roaming bằng cách di chuyển thiết bị giữa các AP,
-                đảm bảo không bị ngắt kết nối.</li>
-            <li><strong>Stress Test:</strong> Mô phỏng tình huống <strong>3.500 thiết bị kết nối đồng thời</strong> để
-                kiểm tra khả năng chịu tải của hệ thống.</li>
-        </ul>
-
-        <h2 id="s4-2">4.2. Quản lý rủi ro</h2>
-        <p>Để hệ thống phục vụ 5.000 user hoạt động trơn tru, dự án thiết lập kịch bản phân cấp xử lý các rủi ro chính:
-        </p>
-
-        <h3 id="s4-2a">a) Sự cố kỹ thuật</h3>
+      <table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>Công việc</th>
+            <th>Phụ thuộc</th>
+            <th>tₒ (ngày)</th>
+            <th>tₘ (ngày)</th>
+            <th>tₚ (ngày)</th>
+            <th>tₑ (ngày)</th>
+          </tr>
+        </thead>
+<tbody><tr>
+            <td>3.4 Đấu nối</td>
+            <td>3.3</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>4.1 Cấu hình</td>
+            <td>3.4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3.2</td>
+          </tr>
+          <tr>
+            <td>4.2 Kiểm thử tải</td>
+            <td>4.1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2.2</td>
+          </tr>
+          <tr>
+            <td>4.3 Kiểm thử bảo mật</td>
+            <td>4.1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>5.1 Nghiệm thu</td>
+            <td>4.2, 4.3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1.2</td>
+          </tr>
+          <tr>
+            <td>5.2 Đào tạo</td>
+            <td>5.1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1.2</td>
+          </tr>
+          <tr>
+            <td>5.3 Bàn giao</td>
+            <td>5.2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1.0</td>
+          </tr>
+        </tbody>
+</table>
+<div class="note-box">
+        <strong>📌 Đường găng (Critical Path):</strong> 1.1 → 1.2 → 1.3 → 1.4 → 2.1 → 2.2 → 2.3 → 3.1 → 3.3 → 3.4 → 4.1
+        → 4.2 → 5.1 → 5.2 → 5.3<br>
+        <strong>Tổng thời gian đường găng: ≈ 44,5 ngày</strong> (làm tròn 45 ngày)<br>
+        Các công việc 3.2 và 4.3 nằm ngoài đường găng, có thời gian dự phòng (float).
+      </div>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -856,44 +1431,18 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<div class="incident-card">
-            <div class="incident-title">🔴 Nghẽn băng thông / Xung đột IP</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Sinh viên vào được WiFi
-                    nhưng báo <em>"No Internet"</em> hoặc <em>"IP Conflict"</em>.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong></span>
-            </div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Huy truy cập Core: Giảm
-                    <strong>DHCP Lease Time</strong> từ 8 tiếng xuống 2 tiếng; Phân bổ lại dải VLAN; Giới hạn
-                    <strong>Rate Limit 15Mbps/user</strong> để chống nghẽn cục bộ.</span></div>
-        </div>
+      <div class="note-box">
+        <strong>📝 Lưu ý:</strong> Toàn bộ thông số kỹ thuật, số liệu dự toán dưới đây được tối ưu riêng cho quy mô
+        5.000 người, sử dụng kiến thức chuyên ngành CNTT ngoài tài liệu.
+      </div>
 
-        <div class="incident-card">
-            <div class="incident-title">🟠 Đứt cáp quang/cáp mạng</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Một khu vực (VD: Thư viện)
-                    hoàn toàn mất kết nối.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Phương</strong>
-                    (điều phối) và Đội thi công</span></div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Dùng máy đo quang/đo cáp xác
-                    định điểm đứt. Phương xuất vật tư dự phòng từ kho, yêu cầu đội thợ nối lại hoặc kéo cáp mới trong
-                    vòng <strong>2 giờ (SLA 2h)</strong>.</span></div>
-        </div>
-
-        <div class="incident-card">
-            <div class="incident-title">🟡 Điểm mù sóng (Dead-zone) tại Ký túc xá</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Tín hiệu cuối hành lang
-                    phòng ở KTX (45m², nhiều vách tường) bị yếu.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong> (đo
-                    kiểm) và <strong>Phương</strong> (bổ sung thiết bị)</span></div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Huy dùng
-                    <strong>Ekahau</strong> đo lại sóng, xác định suy hao do tường bê tông. Phương trích quỹ dự phòng
-                    mua thêm <strong>5 bộ AP phát xuyên tường</strong> bổ sung cho các điểm lọt sóng.</span></div>
-        </div>
+      <h2 id="s3-1">3.1. Lập kế hoạch và giải pháp dự án</h2>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -901,27 +1450,27 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h3 id="s4-2b">b) Chậm tiến độ</h3>
-        <div class="incident-card">
-            <div class="incident-title">⏰ Thi công gây ồn, ảnh hưởng giờ học</div>
-            <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Ban quản lý tòa nhà yêu cầu
-                    dừng thi công trong giờ hành chính.</span></div>
-            <div class="incident-row"><span class="incident-label">Người xử
-                    lý:</span><span><strong>Phương</strong></span></div>
-            <div class="incident-row"><span class="incident-label">Hành động:</span><span>Phương đàm phán, điều chỉnh
-                    lịch thi công sang <strong>ca đêm (21h00 — 05h00)</strong> và cuối tuần. Cập nhật lại sơ đồ tiến
-                    độ.</span></div>
-        </div>
-        <p>Trong trường hợp trễ tiến độ nghiêm trọng (&gt; 5 ngày), Huy báo cáo giảng viên hướng dẫn và đề xuất tăng ca
-            hoặc bổ sung nhân lực thi công.</p>
+      <h3 id="s3-1a">a) Mục tiêu kỹ thuật của hệ thống WiFi</h3>
+      <ul>
+        <li>Phủ sóng WiFi <strong>100%</strong> diện tích giảng đường, thư viện, phòng thực hành, khuôn viên và ký
+          túc xá.</li>
+        <li>Hệ thống chịu tải đồng thời <strong>3.500 — 4.000 thiết bị</strong> trong giờ cao điểm.</li>
+        <li>Tốc độ tối thiểu <strong>15 Mbps/user</strong> cho mọi khu vực.</li>
+        <li>Đảm bảo <strong>chuyển vùng liền mạch</strong> (Seamless Roaming) giữa các AP trong cùng khu vực.</li>
+        <li>Hệ thống bảo mật theo chuẩn <strong>WPA3-Enterprise</strong>, xác thực người dùng qua RADIUS.</li>
+      </ul>
 
-        <h3 id="s4-2c">c) Vượt ngân sách</h3>
+      <h3 id="s3-1b">b) Giải pháp công nghệ và mô hình mạng đề xuất</h3>
+      <p>Triển khai hệ thống <strong>WiFi 6 (802.11ax)</strong> — chuẩn mạng không dây thế hệ mới nhất, hỗ trợ công
+        nghệ
+        OFDMA và MU-MIMO, tối ưu cho môi trường đông người dùng.</p>
+      <p><strong>Mô hình mạng ba tầng:</strong></p>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -929,33 +1478,63 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<ul>
-            <li>Mọi chi phí phát sinh &gt; <strong>5.000.000 VNĐ</strong> phải được Huy phê duyệt trước khi thực hiện.
-            </li>
-            <li>Sử dụng <strong>quỹ dự phòng 10% (~115 triệu VNĐ)</strong> cho các chi phí không lường trước.</li>
-            <li>Phương theo dõi bảng Excel chi tiêu hàng ngày, cảnh báo khi tổng chi phí vượt <strong>90%</strong> ngân
-                sách dự kiến.</li>
-            <li>Nếu vượt quỹ dự phòng, dự án sẽ xem xét đàm phán lại giá với nhà cung cấp hoặc giảm số lượng AP tại các
-                khu vực ít sử dụng.</li>
-        </ul>
+      <ul>
+        <li><strong>Core Layer:</strong> Core Switch 10G + Firewall — xử lý định tuyến trung tâm, phân chia VLAN,
+          quản lý an ninh mạng.</li>
+        <li><strong>Distribution Layer:</strong> 15 Switch Access PoE 24 port — cấp nguồn PoE cho AP, kết nối đường
+          trục.</li>
+        <li><strong>Access Layer:</strong> 120 Access Point WiFi 6 (Indoor/Outdoor) — phát sóng trực tiếp đến người
+          dùng.</li>
+      </ul>
+      <p>Toàn bộ hệ thống được quản lý tập trung qua <strong>WiFi Controller</strong>, cho phép giám sát, cấu hình và
+        xử lý sự cố từ xa.</p>
 
-        <h3 id="s4-2d">d) Đề xuất biện pháp phòng ngừa</h3>
-        <ul>
-            <li><strong>Lập danh sách nhà cung cấp dự phòng:</strong> Chuẩn bị sẵn 2–3 nhà cung cấp thiết bị thay thế để
-                tránh phụ thuộc vào một đơn vị.</li>
-            <li><strong>Dự trữ vật tư:</strong> Luôn dự trữ <strong>10% số lượng</strong> cáp mạng và AP để xử lý các
-                tình huống hư hỏng, thay thế nhanh.</li>
-            <li><strong>Bảo hiểm thiết bị:</strong> Yêu cầu nhà cung cấp cam kết bảo hành <strong>tối thiểu 3
-                    năm</strong> cho toàn bộ thiết bị.</li>
-            <li><strong>Đào tạo chuyển giao:</strong> Lập kế hoạch đào tạo bộ phận IT trường vận hành hệ thống ngay từ
-                giai đoạn 4 (cấu hình) để đảm bảo tính bền vững.</li>
-        </ul>
+      <h3 id="s3-1c">c) Kế hoạch triển khai theo các giai đoạn</h3>
+      <p class="no-indent">Dự kiến <strong>45 ngày</strong> (01/02/2025 – 17/03/2025), chia thành 5 giai đoạn:</p>
+      <table class="content-table timeline-table">
+        <thead>
+          <tr>
+            <th>Giai đoạn</th>
+            <th>Thời gian</th>
+            <th>Nội dung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GĐ 1</td>
+            <td>01/02 – 05/02</td>
+            <td>Khảo sát thực địa, vẽ bản đồ nhiệt (Heatmap) sóng WiFi tại các giảng đường, thư viện, phòng thực
+              hành và KTX</td>
+          </tr>
+          <tr>
+            <td>GĐ 2</td>
+            <td>06/02 – 12/02</td>
+            <td>Chốt danh sách vật tư, đặt hàng và nhập kho thiết bị (Switch, AP, Firewall, cáp mạng)</td>
+          </tr>
+          <tr>
+            <td>GĐ 3</td>
+            <td>13/02 – 05/03</td>
+            <td>Thi công kéo cáp quang nội bộ, rải cáp Cat6 và khoan lắp AP (chủ yếu ca đêm &amp; cuối tuần)
+            </td>
+          </tr>
+          <tr>
+            <td>GĐ 4</td>
+            <td>06/03 – 15/03</td>
+            <td>Cấu hình Controller, chia VLAN, thiết lập Policy bảo mật và đo kiểm băng thông</td>
+          </tr>
+          <tr>
+            <td>GĐ 5</td>
+            <td>16/03 – 17/03</td>
+            <td>Chạy thử nghiệm, đào tạo chuyển giao cho bộ phận IT trường và ký biên bản nghiệm thu</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -963,21 +1542,25 @@
     </div>
   </div>
 
-<div class="page">
+  <div class="page">
     <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-<h2 id="s4-3">4.3. Đánh giá, nghiệm thu</h2>
-        <ul>
-            <li><strong>Huy:</strong> Xuất cấu hình hệ thống (Backup Config), lập tài liệu hướng dẫn vận hành mạng.</li>
-            <li><strong>Phương:</strong> Tập hợp hồ sơ bản vẽ hoàn công, biên bản bàn giao thiết bị.</li>
-            <li>Kiểm tra nghiệm thu theo <strong>checklist</strong>: phủ sóng 100%, tốc độ ≥ 15Mbps, Roaming hoạt động,
-                bảo mật WPA3.</li>
-            <li>Cả hai cùng ký bàn giao hệ thống với <strong>Phòng Công nghệ Thông tin</strong> của Trường Đại học Hòa
-                Bình, kết thúc dự án.</li>
-        </ul>
+      <h3 id="s3-1d">d) Tiến độ thực hiện và quản lý công việc</h3>
+      <p>Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để theo dõi tiến độ từng giai đoạn.
+        Mỗi task được gán
+        người phụ trách, deadline và trạng thái (To-do / In Progress / Done). Huy và Phương họp nhanh
+        <strong>Daily Standup 15 phút</strong> mỗi sáng để rà soát khối lượng công việc hoàn thành và các vướng mắc
+        cần giải quyết.
+      </p>
+
+      <h2 id="s3-2">3.2. Tổ chức và quản lý nhân lực</h2>
+      <p class="no-indent">Dự án được đồng quản lý bởi 2 học viên, phân chia nhiệm vụ và chấm công (Timesheet) như
+        sau:</p>
+
+      <h3 id="s3-2a">a) Quản lý dự án</h3>
     </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
@@ -985,63 +1568,867 @@
     </div>
   </div>
 
-    <!-- ==================== KẾT LUẬN & TLTK ==================== -->
-    <div class="page" id="conclusion">
-        <div class="page-header">
+  <div class="page">
+    <div class="page-header">
       <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
       <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
     <div class="page-content">
-        <h1 class="chapter-heading">Kết Luận</h1>
-        <p>Dự án <strong>"Phủ sóng WiFi cho Trường Đại học Hòa Bình"</strong> với khả năng phục vụ <strong>5.000 sinh
-                viên và giảng viên</strong> là bước nhảy vọt về hạ tầng công nghệ. Hệ thống mạng mạnh mẽ này sẽ tối ưu
-            hóa hiệu năng của các thiết bị hiện đại sẵn có, giúp sinh viên và giảng viên tiếp cận kho tri thức số một
-            cách mượt mà nhất.</p>
-        <p>Sự thành công của dự án được xây dựng trên nền tảng phối hợp chặt chẽ giữa hai thành viên: <strong>Nguyễn Hữu
-                Huy</strong> — với vai trò Giám đốc dự án kiêm Trưởng nhóm Kỹ thuật, đảm nhiệm thiết kế kiến trúc mạng,
-            cấu hình hệ thống và xử lý các sự cố phức tạp; và <strong>Nguyễn Thị Phương</strong> — với vai trò Phó Giám
-            đốc dự án kiêm Trưởng nhóm Triển khai, chịu trách nhiệm khảo sát thực địa, giám sát thi công, quản lý ngân
-            sách và soạn thảo hồ sơ nghiệm thu.</p>
-        <p>Với giải pháp công nghệ <strong>WiFi 6 (802.11ax)</strong>, mô hình mạng phân tầng hiện đại, tiến độ 45 ngày
-            được quản lý chặt chẽ bằng MS Project, cùng ngân sách dự toán hợp lý <strong>~1.265 tỷ VNĐ</strong>, dự án
-            hoàn toàn có khả năng đáp ứng nhu cầu kết nối Internet ngày càng tăng cao trong môi trường giáo dục hiện
-            đại.</p>
-        <p>Dự án không chỉ góp phần nâng cao chất lượng đào tạo mà còn khẳng định vị thế của Trường Đại học Hòa Bình
-            trong việc ứng dụng công nghệ thông tin vào giáo dục, phù hợp với phương châm <strong>"Đoàn kết - Đổi mới -
-                Hội nhập - Phát triển"</strong> của nhà trường.</p>
+      <div class="role-card">
+        <div class="role-name">Nguyễn Hữu Huy</div>
+        <div class="role-title">Giám đốc dự án (Project Manager)</div>
+        <p class="no-indent"><strong>Trách nhiệm:</strong></p>
+        <ul>
+          <li>Lập kế hoạch tổng thể, phân bổ nguồn lực và kiểm soát tiến độ dự án.</li>
+          <li>Phê duyệt các quyết định kỹ thuật và tài chính quan trọng.</li>
+          <li>Báo cáo tiến độ cho giảng viên hướng dẫn và Ban Giám hiệu nhà trường.</li>
+        </ul>
+        <p class="no-indent" style="margin-top:6px;"><strong>Chấm công:</strong> Tham gia Full-time (<strong>45 ngày
+            công</strong>).</p>
+      </div>
 
-        <div style="height:30px;"></div>
-
-        <h1 class="chapter-heading" id="references">Tài Liệu Tham Khảo</h1>
-        <ol class="references">
-            <li>Các thông tin công khai trên Website Trường Đại học Hòa Bình (<em>daihochoabinh.edu.vn</em>).</li>
-            <li>Quy mô đào tạo, cơ cấu tổ chức nhân sự và giới thiệu không gian Trường Đại học Hòa Bình.</li>
-            <li>Giáo trình <em>Quản lý dự án Công nghệ Thông tin</em> (Tài liệu ngoài).</li>
-            <li>Các tài liệu kỹ thuật về thiết kế mạng mật độ cao — <em>High-Density Network Design</em> (Tài liệu
-                ngoài).</li>
-        </ol>
-
-        </div>
+      <h3 id="s3-2b">b) Nhóm kỹ thuật</h3>
+      <div class="role-card">
+        <div class="role-name">Nguyễn Hữu Huy</div>
+        <div class="role-title">Trưởng nhóm Kỹ thuật (Tech Lead)</div>
+        <p class="no-indent"><strong>Công việc kỹ thuật chuyên sâu:</strong></p>
+        <ul>
+          <li>Thiết kế kiến trúc mạng tổng thể (Core, Distribution, Access).</li>
+          <li>Trực tiếp cấu hình Core Switch, Firewall, và hệ thống quản lý WiFi Controller.</li>
+          <li>Xử lý các sự cố kỹ thuật phức tạp (Cấp phát IP, định tuyến, lỗi thiết bị).</li>
+          <li>Đo kiểm, tối ưu băng thông và chất lượng sóng toàn hệ thống.</li>
+        </ul>
+      </div>
+    </div>
     <div class="page-footer">
       <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
       <span class="page-number">20</span>
     </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
     </div>
+    <div class="page-content">
+      <h3 id="s3-2c">c) Nhóm hỗ trợ</h3>
+      <div class="role-card">
+        <div class="role-name">Nguyễn Thị Phương</div>
+        <div class="role-title">Phó Giám đốc dự án kiêm Trưởng nhóm Triển khai &amp; Hỗ trợ</div>
+        <p class="no-indent"><strong>Công việc:</strong></p>
+        <ul>
+          <li>Khảo sát vị trí lắp đặt thực tế, xin giấy phép thi công từ Ban quản lý tòa nhà và KTX.</li>
+          <li>Giám sát đội thi công kéo cáp, đảm bảo thẩm mỹ tại các phòng học được trang bị hiện đại (tivi, máy
+            chiếu).</li>
+          <li>Quản lý ngân sách, mua sắm vật tư và soạn thảo hồ sơ nghiệm thu.</li>
+        </ul>
+        <p class="no-indent" style="margin-top:6px;"><strong>Chấm công:</strong> Tham gia Full-time (<strong>45 ngày
+            công</strong>).</p>
+      </div>
 
-    <!-- Nút Xuất PDF -->
-    <button class="no-print btn-export-pdf" onclick="exportPDF()" title="Xuất file PDF">
-        <svg viewBox="0 0 24 24">
-            <path
-                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
-        </svg>
-        Xuất PDF
-    </button>
+      <div class="role-card" style="border-color:var(--border);">
+        <div class="role-name">Đội thi công mạng (Outsource)</div>
+        <div class="role-title">6 nhân viên đi dây cáp, khoan trần lắp AP</div>
+        <p class="no-indent">Phương trực tiếp chấm công cho đội này theo tiến độ hoàn thành từng tầng.</p>
+      </div>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">21</span>
+    </div>
+  </div>
 
-    <script>
-        function exportPDF() {
-            window.print();
-        }
-    </script>
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h2 id="s3-3">3.3. Dự trù kinh phí</h2>
+      <p class="no-indent" style="font-style:italic;color:var(--text-light);font-size:11pt;">(Bảng dự toán giả định
+        cho quy mô 5.000 user)</p>
+
+      <h3 id="s3-3a">a) Thiết bị mạng</h3>
+      <table class="content-table" style="margin-bottom:8px;">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hạng mục</th>
+            <th>SL</th>
+            <th style="text-align:right;">Đơn giá (VNĐ)</th>
+            <th style="text-align:right;">Thành tiền (VNĐ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Core Switch 10G &amp; Firewall</td>
+            <td>2 bộ</td>
+            <td style="text-align:right;">85.000.000</td>
+            <td style="text-align:right;font-weight:700;">170.000.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Access Point WiFi 6 (Indoor/Outdoor)</td>
+            <td>120 chiếc</td>
+            <td style="text-align:right;">4.500.000</td>
+            <td style="text-align:right;font-weight:700;">540.000.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Switch Access PoE 24 port</td>
+            <td>15 chiếc</td>
+            <td style="text-align:right;">12.000.000</td>
+            <td style="text-align:right;font-weight:700;">180.000.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">22</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h3 id="s3-3b">b) Chi phí lắp đặt</h3>
+      <table class="content-table" style="margin-bottom:8px;">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hạng mục</th>
+            <th>SL</th>
+            <th style="text-align:right;">Thành tiền (VNĐ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4</td>
+            <td>Cáp mạng Cat6, ống gen, vật tư phụ</td>
+            <td>Lô</td>
+            <td style="text-align:right;font-weight:700;">120.000.000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id="s3-3c">c) Nhân công, vận hành và bảo trì</h3>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">23</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <table class="content-table" style="margin-bottom:8px;">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Hạng mục</th>
+            <th>SL</th>
+            <th style="text-align:right;">Đơn giá (VNĐ)</th>
+            <th style="text-align:right;">Thành tiền (VNĐ)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>Nhân công thi công (6 thợ × 20 ngày)</td>
+            <td>120 công</td>
+            <td style="text-align:right;">500.000</td>
+            <td style="text-align:right;font-weight:700;">60.000.000</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Phí cấu hình, quản lý dự án</td>
+            <td>2 gói</td>
+            <td style="text-align:right;">40.000.000</td>
+            <td style="text-align:right;font-weight:700;">80.000.000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id="s3-3d">d) Chi phí dự phòng</h3>
+      <div class="budget-highlight">
+        <table class="content-table" style="margin:0;">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Hạng mục</th>
+              <th style="text-align:right;">Thành tiền (VNĐ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7</td>
+              <td>Chi phí dự phòng phát sinh (10%)</td>
+              <td style="text-align:right;font-weight:700;">115.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="total-line">TỔNG NGÂN SÁCH DỰ KIẾN: ~ 1.265.000.000 VNĐ</div>
+      </div>
+
+
+      <h2 id="s3-4">3.4. Quản lý chất lượng dự án</h2>
+      <p>Theo Chương 7 của giáo trình Từ Quang Phương, quản lý chất lượng dự án bao gồm ba quá trình:
+        <strong>lập kế hoạch chất lượng</strong>, <strong>đảm bảo chất lượng</strong> và <strong>kiểm soát chất
+          lượng</strong>.
+      </p>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">24</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h3>a) Tiêu chuẩn chất lượng kỹ thuật</h3>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Chỉ tiêu</th>
+            <th>Mục tiêu</th>
+            <th>Phương pháp đo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Độ phủ sóng WiFi</td>
+            <td>≥ −65 dBm tại mọi điểm trong nhà</td>
+            <td>Quét heatmap bằng Ekahau/NetSpot</td>
+          </tr>
+          <tr>
+            <td>Tốc độ download trung bình</td>
+            <td>≥ 100 Mbps / user trong giờ cao điểm</td>
+            <td>iPerf3 test từ nhiều client</td>
+          </tr>
+          <tr>
+            <td>Số thiết bị đồng thời / AP</td>
+            <td>≥ 60 devices không suy giảm QoS</td>
+            <td>Stress test với công cụ tạo tải</td>
+          </tr>
+          <tr>
+            <td>Độ trễ (Latency)</td>
+            <td>≤ 20ms P95 trong mạng nội bộ</td>
+            <td>Ping test liên tục 24h</td>
+          </tr>
+          <tr>
+            <td>Uptime hệ thống</td>
+            <td>≥ 99.5% (≤ 3.65 giờ downtime/tháng)</td>
+            <td>Monitoring NMS 24/7</td>
+          </tr>
+          <tr>
+            <td>Bảo mật — WPA3</td>
+            <td>100% AP sử dụng WPA3-Enterprise</td>
+            <td>Audit cấu hình + pentest</td>
+          </tr>
+          <tr>
+            <td>Thời gian xác thực RADIUS</td>
+            <td>≤ 3 giây cho mỗi phiên đăng nhập</td>
+            <td>Log RADIUS server</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>b) Quy trình kiểm soát chất lượng</h3>
+      <p>Áp dụng <strong>chu trình PDCA (Plan-Do-Check-Act)</strong> của Deming vào kiểm soát chất lượng:</p>
+      <ul>
+        <li><strong>Plan:</strong> Xây dựng checklist nghiệm thu chi tiết cho từng hạng mục (cáp, AP, switch, cấu hình).
+        </li>
+        <li><strong>Do:</strong> Thi công theo đúng bản vẽ kỹ thuật đã phê duyệt, ghi nhật ký thi công.</li>
+        <li><strong>Check:</strong> Kiểm tra đối chiếu với tiêu chuẩn bằng thiết bị đo chuyên dụng.</li>
+        <li><strong>Act:</strong> Xử lý sai lệch, cập nhật quy trình nếu phát hiện lỗi hệ thống.</li>
+      </ul>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">25</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h3>c) Chi phí chất lượng (Cost of Quality)</h3>
+      <p>Theo Từ Quang Phương, chi phí chất lượng gồm: chi phí phòng ngừa, chi phí đánh giá, chi phí sai hỏng nội bộ
+        và chi phí sai hỏng bên ngoài. Dự án phân bổ <strong>~5% ngân sách (≈63 triệu VNĐ)</strong> cho hoạt động
+        đảm bảo chất lượng:</p>
+      <ul>
+        <li><strong>Chi phí phòng ngừa (30%):</strong> Đào tạo kỹ thuật viên, mua thiết bị test (~19 triệu).</li>
+        <li><strong>Chi phí đánh giá (50%):</strong> Thuê chuyên gia audit mạng, công cụ monitoring (~31 triệu).</li>
+        <li><strong>Chi phí sửa chữa dự phòng (20%):</strong> Quỹ xử lý sự cố phát sinh (~13 triệu).</li>
+      </ul>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">26</span>
+    </div>
+  </div>
+
+  <!-- ==================== CHƯƠNG 4 ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h1 class="chapter-heading">Chương 4. Giám Sát Dự Án, Đánh Giá Kết Quả</h1>
+
+      <h2 id="s4-0">4.0. Phương pháp giám sát dự án theo Từ Quang Phương</h2>
+      <p>Chương 8 của giáo trình nhấn mạnh rằng giám sát dự án phải được thực hiện <strong>liên tục và có hệ
+          thống</strong>
+        trên 3 chiều: <strong>tiến độ — chi phí — chất lượng</strong>. Dự án WiFi ĐHHB áp dụng phương pháp
+        <strong>Quản lý Giá trị Thu được (Earned Value Management — EVM)</strong> để đo lường hiệu quả tổng hợp.
+      </p>
+
+      <h3>a) Các chỉ số EVM chính</h3>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Chỉ số</th>
+            <th>Công thức</th>
+            <th>Ý nghĩa</th>
+            <th>Mục tiêu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>PV</strong> (Planned Value)</td>
+            <td>—</td>
+            <td>Giá trị kế hoạch tại thời điểm báo cáo</td>
+            <td>Theo ngân sách</td>
+          </tr>
+          <tr>
+            <td><strong>EV</strong> (Earned Value)</td>
+            <td>—</td>
+            <td>Giá trị công việc thực tế hoàn thành</td>
+            <td>EV ≥ PV</td>
+          </tr>
+          <tr>
+            <td><strong>AC</strong> (Actual Cost)</td>
+            <td>—</td>
+            <td>Chi phí thực tế đã chi</td>
+            <td>AC ≤ PV</td>
+          </tr>
+          <tr>
+            <td><strong>SPI</strong></td>
+            <td>EV / PV</td>
+            <td>Chỉ số hiệu suất tiến độ</td>
+            <td>SPI ≥ 1.0</td>
+          </tr>
+          <tr>
+            <td><strong>CPI</strong></td>
+            <td>EV / AC</td>
+            <td>Chỉ số hiệu suất chi phí</td>
+            <td>CPI ≥ 1.0</td>
+          </tr>
+          <tr>
+            <td><strong>SV</strong></td>
+            <td>EV − PV</td>
+            <td>Chênh lệch tiến độ (+ là sớm, − là trễ)</td>
+            <td>SV ≥ 0</td>
+          </tr>
+          <tr>
+            <td><strong>CV</strong></td>
+            <td>EV − AC</td>
+            <td>Chênh lệch chi phí (+ là tiết kiệm, − là vượt)</td>
+            <td>CV ≥ 0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-box">
+        <strong>📊 Ví dụ áp dụng EVM:</strong> Sau 25 ngày (giai đoạn 3 — lắp đặt), nếu PV = 800 triệu, EV = 750 triệu,
+        AC = 780 triệu →
+        SPI = 0.94 (chậm 6%), CPI = 0.96 (vượt chi 4%). PM cần đẩy nhanh thi công và kiểm soát chi tiêu.
+      </div>
+
+      <h3>b) Biểu đồ giám sát tiến độ theo mốc</h3>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">27</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Mốc kiểm soát</th>
+            <th>Ngày</th>
+            <th>Tiêu chí hoàn thành</th>
+            <th>Người phê duyệt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M1: Thiết kế hoàn thành</td>
+            <td>Ngày 10</td>
+            <td>Bản vẽ được BGH phê duyệt</td>
+            <td>Phó GĐ DA</td>
+          </tr>
+          <tr>
+            <td>M2: Thiết bị về đủ</td>
+            <td>Ngày 20</td>
+            <td>100% thiết bị nhận, kiểm tra OK</td>
+            <td>KCS</td>
+          </tr>
+          <tr>
+            <td>M3: Lắp đặt xong</td>
+            <td>Ngày 35</td>
+            <td>100% AP, switch lắp đặt, đấu nối</td>
+            <td>Trưởng KT</td>
+          </tr>
+          <tr>
+            <td>M4: Kiểm thử thành công</td>
+            <td>Ngày 42</td>
+            <td>Load test pass, pentest pass</td>
+            <td>QA Lead</td>
+          </tr>
+          <tr>
+            <td>M5: Bàn giao chính thức</td>
+            <td>Ngày 45</td>
+            <td>Ký biên bản nghiệm thu</td>
+            <td>PM + BGH</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <div class="note-box">
+        <strong>📝 Lưu ý:</strong> Các kiến thức về quy trình quản trị dự án trong chương này được bổ sung từ thực
+        tiễn quản lý dự án CNTT.
+      </div>
+
+      <h2 id="s4-1">4.1. Giám sát tiến độ và chất lượng</h2>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">28</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h3 id="s4-1a">a) Theo dõi tiến độ dự án</h3>
+      <ul>
+        <li><strong>Công cụ:</strong> Sử dụng <strong>Microsoft Project</strong> hoặc <strong>Trello</strong> để
+          theo dõi các đầu việc, gán người phụ trách và deadline cho từng task.</li>
+        <li><strong>Báo cáo hàng ngày (Daily Standup):</strong> Huy và Phương họp nhanh 15 phút mỗi sáng để rà soát:
+          <em>"Hôm qua thợ thi công được mấy phòng? Có vướng mắc gì ở phòng thí nghiệm Y khoa/Mỹ thuật
+            không?"</em>
+        </li>
+        <li><strong>Báo cáo tuần:</strong> Phương tổng hợp file báo cáo tiến độ và mức tiêu hao vật tư gửi cho Ban
+          Giám hiệu nhà trường vào chiều thứ Sáu hàng tuần.</li>
+        <li><strong>Milestone kiểm tra:</strong> Cuối mỗi giai đoạn (GĐ 1-5), Huy kiểm tra và ký xác nhận hoàn thành
+          trước khi chuyển sang giai đoạn tiếp theo.</li>
+      </ul>
+
+      <h3 id="s4-1b">b) Kiểm soát chất lượng</h3>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">29</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <ul>
+        <li><strong>Đo kiểm sóng WiFi:</strong> Sử dụng phần mềm <strong>Ekahau</strong> hoặc <strong>WiFi
+            Analyzer</strong> đo cường độ tín hiệu (dBm) tại từng khu vực sau khi lắp đặt. Yêu cầu tối thiểu
+          <strong>-65 dBm</strong> tại mọi điểm.
+        </li>
+        <li><strong>Kiểm tra tốc độ:</strong> Chạy <strong>iPerf3</strong> kiểm tra băng thông thực tế, đảm bảo đạt
+          tối thiểu <strong>15 Mbps/user</strong>.</li>
+        <li><strong>Kiểm tra chuyển vùng:</strong> Test Seamless Roaming bằng cách di chuyển thiết bị giữa các AP,
+          đảm bảo không bị ngắt kết nối.</li>
+        <li><strong>Stress Test:</strong> Mô phỏng tình huống <strong>3.500 thiết bị kết nối đồng thời</strong> để
+          kiểm tra khả năng chịu tải của hệ thống.</li>
+      </ul>
+
+
+      <h2 id="s4-2-matrix">4.2a. Ma trận xác suất — tác động rủi ro</h2>
+      <p>Theo Chương 9 giáo trình Từ Quang Phương, quản lý rủi ro gồm 4 bước: <strong>nhận diện → phân tích →
+          lập kế hoạch ứng phó → giám sát</strong>. Ma trận sau đánh giá 10 rủi ro chính của dự án theo thang điểm
+        xác suất (1-5) × tác động (1-5):</p>
+<table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Rủi ro</th>
+            <th>Xác suất</th>
+            <th>Tác động</th>
+            <th>Điểm RR</th>
+            <th>Mức độ</th>
+            <th>Biện pháp ứng phó</th>
+          </tr>
+        </thead>
+<tbody>
+          <tr>
+            <td>R1</td>
+            <td>Chậm giao thiết bị nhập khẩu</td>
+            <td>3</td>
+            <td>4</td>
+            <td style="color:var(--accent);font-weight:700;">12</td>
+            <td style="color:#e65100;font-weight:600;">Cao</td>
+            <td>Đặt hàng sớm 2 tuần; có nhà cung cấp dự phòng</td>
+          </tr>
+          <tr>
+            <td>R2</td>
+            <td>Sóng WiFi nhiễu tại khu vực đông người</td>
+            <td>4</td>
+            <td>3</td>
+            <td style="color:var(--accent);font-weight:700;">12</td>
+            <td style="color:#e65100;font-weight:600;">Cao</td>
+            <td>Quy hoạch kênh tần số; dùng WiFi 6 OFDMA</td>
+          </tr>
+          <tr>
+            <td>R3</td>
+            <td>Vượt ngân sách &gt; 10%</td>
+            <td>2</td>
+            <td>5</td>
+            <td style="color:#e65100;font-weight:600;">10</td>
+            <td style="color:#e65100;font-weight:600;">Cao</td>
+            <td>Quỹ dự phòng 5%; kiểm soát EVM hàng tuần</td>
+          </tr>
+          <tr>
+            <td>R4</td>
+            <td>Tấn công mạng sau triển khai</td>
+            <td>3</td>
+            <td>4</td>
+            <td style="color:var(--accent);font-weight:700;">12</td>
+            <td style="color:#e65100;font-weight:600;">Cao</td>
+            <td>WPA3 + RADIUS + IDS/IPS + pentest trước vận hành</td>
+          </tr>
+          <tr>
+            <td>R5</td>
+            <td>Mất điện kéo dài &gt; 2 giờ</td>
+            <td>2</td>
+            <td>4</td>
+            <td>8</td>
+            <td style="color:#ef6c00;font-weight:600;">TB</td>
+            <td>UPS cho core switch; máy phát điện dự phòng</td>
+          </tr>
+          </tbody>
+</table>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">30</span>
+    </div>
+  </div>
+
+<div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <table class="content-table">
+<table class="content-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Rủi ro</th>
+            <th>Xác suất</th>
+            <th>Tác động</th>
+            <th>Điểm RR</th>
+            <th>Mức độ</th>
+            <th>Biện pháp ứng phó</th>
+          </tr>
+        </thead>
+<tbody><tr>
+            <td>R6</td>
+            <td>Nhân sự kỹ thuật nghỉ việc giữa dự án</td>
+            <td>2</td>
+            <td>3</td>
+            <td>6</td>
+            <td style="color:#ef6c00;font-weight:600;">TB</td>
+            <td>Đào tạo chéo; tài liệu hóa 100%</td>
+          </tr>
+          <tr>
+            <td>R7</td>
+            <td>Thiết bị bị lỗi hàng loạt (defective batch)</td>
+            <td>1</td>
+            <td>5</td>
+            <td>5</td>
+            <td style="color:#ef6c00;font-weight:600;">TB</td>
+            <td>Bảo hành 3 năm; kiểm tra đầu vào 100%</td>
+          </tr>
+          <tr>
+            <td>R8</td>
+            <td>Thay đổi yêu cầu từ BGH giữa dự án</td>
+            <td>3</td>
+            <td>3</td>
+            <td>9</td>
+            <td style="color:#ef6c00;font-weight:600;">TB</td>
+            <td>Change request process; meeting status hàng tuần</td>
+          </tr>
+          <tr>
+            <td>R9</td>
+            <td>Cáp mạng bị hư hại do thi công xây dựng khác</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>Thấp</td>
+            <td>Phối hợp các nhà thầu; bảo vệ đường cáp</td>
+          </tr>
+          <tr>
+            <td>R10</td>
+            <td>Một số AP bị sóng yếu do vật cản bất ngờ</td>
+            <td>3</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="color:#ef6c00;font-weight:600;">TB</td>
+            <td>Site survey kỹ; dự phòng thêm 10% AP</td>
+          </tr>
+        </tbody>
+</table>
+<div class="note-box">
+        <strong>📋 Phân loại mức độ rủi ro:</strong><br>
+        • <strong style="color:var(--accent);">Cao (≥ 10):</strong> Yêu cầu có kế hoạch ứng phó chi tiết, PM theo dõi
+        hàng ngày.<br>
+        • <strong style="color:#ef6c00;">Trung bình (5-9):</strong> Có phương án dự phòng, giám sát hàng tuần.<br>
+        • <strong>Thấp (≤ 4):</strong> Ghi nhận rủi ro, chấp nhận và theo dõi.
+      </div>
+
+      <h2 id="s4-2">4.2. Quản lý rủi ro</h2>
+      <p>Để hệ thống phục vụ 5.000 user hoạt động trơn tru, dự án thiết lập kịch bản phân cấp xử lý các rủi ro chính:
+      </p>
+
+      <h3 id="s4-2a">a) Sự cố kỹ thuật</h3>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">31</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <div class="incident-card">
+        <div class="incident-title">🔴 Nghẽn băng thông / Xung đột IP</div>
+        <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Sinh viên vào được WiFi
+            nhưng báo <em>"No Internet"</em> hoặc <em>"IP Conflict"</em>.</span></div>
+        <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong></span>
+        </div>
+        <div class="incident-row"><span class="incident-label">Hành động:</span><span>Huy truy cập Core: Giảm
+            <strong>DHCP Lease Time</strong> từ 8 tiếng xuống 2 tiếng; Phân bổ lại dải VLAN; Giới hạn
+            <strong>Rate Limit 15Mbps/user</strong> để chống nghẽn cục bộ.</span></div>
+      </div>
+
+      <div class="incident-card">
+        <div class="incident-title">🟠 Đứt cáp quang/cáp mạng</div>
+        <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Một khu vực (VD: Thư viện)
+            hoàn toàn mất kết nối.</span></div>
+        <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Phương</strong>
+            (điều phối) và Đội thi công</span></div>
+        <div class="incident-row"><span class="incident-label">Hành động:</span><span>Dùng máy đo quang/đo cáp xác
+            định điểm đứt. Phương xuất vật tư dự phòng từ kho, yêu cầu đội thợ nối lại hoặc kéo cáp mới trong
+            vòng <strong>2 giờ (SLA 2h)</strong>.</span></div>
+      </div>
+
+      <div class="incident-card">
+        <div class="incident-title">🟡 Điểm mù sóng (Dead-zone) tại Ký túc xá</div>
+        <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Tín hiệu cuối hành lang
+            phòng ở KTX (45m², nhiều vách tường) bị yếu.</span></div>
+        <div class="incident-row"><span class="incident-label">Người xử lý:</span><span><strong>Huy</strong> (đo
+            kiểm) và <strong>Phương</strong> (bổ sung thiết bị)</span></div>
+        <div class="incident-row"><span class="incident-label">Hành động:</span><span>Huy dùng
+            <strong>Ekahau</strong> đo lại sóng, xác định suy hao do tường bê tông. Phương trích quỹ dự phòng
+            mua thêm <strong>5 bộ AP phát xuyên tường</strong> bổ sung cho các điểm lọt sóng.</span></div>
+      </div>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">32</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h3 id="s4-2b">b) Chậm tiến độ</h3>
+      <div class="incident-card">
+        <div class="incident-title">⏰ Thi công gây ồn, ảnh hưởng giờ học</div>
+        <div class="incident-row"><span class="incident-label">Triệu chứng:</span><span>Ban quản lý tòa nhà yêu cầu
+            dừng thi công trong giờ hành chính.</span></div>
+        <div class="incident-row"><span class="incident-label">Người xử
+            lý:</span><span><strong>Phương</strong></span></div>
+        <div class="incident-row"><span class="incident-label">Hành động:</span><span>Phương đàm phán, điều chỉnh
+            lịch thi công sang <strong>ca đêm (21h00 — 05h00)</strong> và cuối tuần. Cập nhật lại sơ đồ tiến
+            độ.</span></div>
+      </div>
+      <p>Trong trường hợp trễ tiến độ nghiêm trọng (&gt; 5 ngày), Huy báo cáo giảng viên hướng dẫn và đề xuất tăng ca
+        hoặc bổ sung nhân lực thi công.</p>
+
+      <h3 id="s4-2c">c) Vượt ngân sách</h3>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">33</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <ul>
+        <li>Mọi chi phí phát sinh &gt; <strong>5.000.000 VNĐ</strong> phải được Huy phê duyệt trước khi thực hiện.
+        </li>
+        <li>Sử dụng <strong>quỹ dự phòng 10% (~115 triệu VNĐ)</strong> cho các chi phí không lường trước.</li>
+        <li>Phương theo dõi bảng Excel chi tiêu hàng ngày, cảnh báo khi tổng chi phí vượt <strong>90%</strong> ngân
+          sách dự kiến.</li>
+        <li>Nếu vượt quỹ dự phòng, dự án sẽ xem xét đàm phán lại giá với nhà cung cấp hoặc giảm số lượng AP tại các
+          khu vực ít sử dụng.</li>
+      </ul>
+
+      <h3 id="s4-2d">d) Đề xuất biện pháp phòng ngừa</h3>
+      <ul>
+        <li><strong>Lập danh sách nhà cung cấp dự phòng:</strong> Chuẩn bị sẵn 2–3 nhà cung cấp thiết bị thay thế để
+          tránh phụ thuộc vào một đơn vị.</li>
+        <li><strong>Dự trữ vật tư:</strong> Luôn dự trữ <strong>10% số lượng</strong> cáp mạng và AP để xử lý các
+          tình huống hư hỏng, thay thế nhanh.</li>
+        <li><strong>Bảo hiểm thiết bị:</strong> Yêu cầu nhà cung cấp cam kết bảo hành <strong>tối thiểu 3
+            năm</strong> cho toàn bộ thiết bị.</li>
+        <li><strong>Đào tạo chuyển giao:</strong> Lập kế hoạch đào tạo bộ phận IT trường vận hành hệ thống ngay từ
+          giai đoạn 4 (cấu hình) để đảm bảo tính bền vững.</li>
+      </ul>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">34</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h2 id="s4-3">4.3. Đánh giá, nghiệm thu</h2>
+      <ul>
+        <li><strong>Huy:</strong> Xuất cấu hình hệ thống (Backup Config), lập tài liệu hướng dẫn vận hành mạng.</li>
+        <li><strong>Phương:</strong> Tập hợp hồ sơ bản vẽ hoàn công, biên bản bàn giao thiết bị.</li>
+        <li>Kiểm tra nghiệm thu theo <strong>checklist</strong>: phủ sóng 100%, tốc độ ≥ 15Mbps, Roaming hoạt động,
+          bảo mật WPA3.</li>
+        <li>Cả hai cùng ký bàn giao hệ thống với <strong>Phòng Công nghệ Thông tin</strong> của Trường Đại học Hòa
+          Bình, kết thúc dự án.</li>
+      </ul>
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">35</span>
+    </div>
+  </div>
+
+  <!-- ==================== KẾT LUẬN & TLTK ==================== -->
+  <div class="page" id="conclusion">
+    <div class="page-header">
+      <img class="logo-img" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+      <div class="header-text">TRƯỜNG ĐẠI HỌC HÒA BÌNH<span>Chương trình Thạc sĩ — Bài tiểu luận</span></div>
+    </div>
+    <div class="page-content">
+      <h1 class="chapter-heading">Kết Luận</h1>
+      <p>Dự án <strong>"Phủ sóng WiFi cho Trường Đại học Hòa Bình"</strong> với khả năng phục vụ <strong>5.000 sinh
+          viên và giảng viên</strong> là bước nhảy vọt về hạ tầng công nghệ. Hệ thống mạng mạnh mẽ này sẽ tối ưu
+        hóa hiệu năng của các thiết bị hiện đại sẵn có, giúp sinh viên và giảng viên tiếp cận kho tri thức số một
+        cách mượt mà nhất.</p>
+      <p>Sự thành công của dự án được xây dựng trên nền tảng phối hợp chặt chẽ giữa hai thành viên: <strong>Nguyễn Hữu
+          Huy</strong> — với vai trò Giám đốc dự án kiêm Trưởng nhóm Kỹ thuật, đảm nhiệm thiết kế kiến trúc mạng,
+        cấu hình hệ thống và xử lý các sự cố phức tạp; và <strong>Nguyễn Thị Phương</strong> — với vai trò Phó Giám
+        đốc dự án kiêm Trưởng nhóm Triển khai, chịu trách nhiệm khảo sát thực địa, giám sát thi công, quản lý ngân
+        sách và soạn thảo hồ sơ nghiệm thu.</p>
+      <p>Với giải pháp công nghệ <strong>WiFi 6 (802.11ax)</strong>, mô hình mạng phân tầng hiện đại, tiến độ 45 ngày
+        được quản lý chặt chẽ bằng MS Project, cùng ngân sách dự toán hợp lý <strong>~1.265 tỷ VNĐ</strong>, dự án
+        hoàn toàn có khả năng đáp ứng nhu cầu kết nối Internet ngày càng tăng cao trong môi trường giáo dục hiện
+        đại.</p>
+      <p>Dự án không chỉ góp phần nâng cao chất lượng đào tạo mà còn khẳng định vị thế của Trường Đại học Hòa Bình
+        trong việc ứng dụng công nghệ thông tin vào giáo dục, phù hợp với phương châm <strong>"Đoàn kết - Đổi mới -
+          Hội nhập - Phát triển"</strong> của nhà trường.</p>
+
+      <div style="height:30px;"></div>
+
+      <h1 class="chapter-heading" id="references">Tài Liệu Tham Khảo</h1>
+      <ol class="references">
+        <li>Từ Quang Phương (2019). <em>Giáo trình Quản lý dự án đầu tư</em>. Nhà xuất bản Đại học Kinh tế Quốc dân.
+        </li>
+        <li>Project Management Institute (2021). <em>A Guide to the Project Management Body of Knowledge (PMBOK®
+            Guide)</em>, 7th Edition.</li>
+        <li>Các thông tin công khai trên Website Trường Đại học Hòa Bình (<em>daihochoabinh.edu.vn</em>).</li>
+        <li>Quy mô đào tạo, cơ cấu tổ chức nhân sự và giới thiệu không gian Trường Đại học Hòa Bình.</li>
+        <li>Giáo trình <em>Quản lý dự án Công nghệ Thông tin</em> (Tài liệu ngoài).</li>
+        <li>Các tài liệu kỹ thuật về thiết kế mạng mật độ cao — <em>High-Density Network Design</em> (Tài liệu
+          ngoài).</li>
+      </ol>
+
+    </div>
+    <div class="page-footer">
+      <span class="footer-title">Lập Dự Án Phủ Sóng WiFi — Trường ĐHHB</span>
+      <span class="page-number">36</span>
+    </div>
+  </div>
+
+  <!-- Nút Xuất PDF -->
+  <button class="no-print btn-export-pdf" onclick="exportPDF()" title="Xuất file PDF">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,19L8,15H10.5V12H13.5V15H16L12,19Z" />
+    </svg>
+    Xuất PDF
+  </button>
+
+  <script>
+    function exportPDF() {
+      window.print();
+    }
+  </script>
 
 </body>
 
